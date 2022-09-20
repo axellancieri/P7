@@ -15,7 +15,7 @@ h2 {
   letter-spacing: 1px;
 }
 main h2 {
-  margin: 15px 19px;
+  margin: 15px 0;
 }
 
 h3 {
@@ -29,34 +29,86 @@ header p {
   margin: auto 9px;
 }
 
-.flexing {
+.dashboard {
   display: flex;
 }
-
-.grey-space {
+.dashboard .grey-space {
   flex-grow: 1;
-  display: inline-block;
-  border: 1px solid grey;
-  padding: 1em;
   background-color: grey;
 }
 
-.flexing-traffic {
+.traffic {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-  padding-bottom: 15px;
+  padding: 0px 19px 15px 19px;
   border-bottom: 1px solid grey;
+}
+.traffic h2 {
+  flex-basis: 100%;
+}
+.traffic p {
+  flex-basis: 100%;
+  justify-content: center;
+  display: flex;
+  height: 150px;
+  align-items: center;
+}
+
+.daily-traffic {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px 19px 15px 19px;
+  border-bottom: 1px solid grey;
+}
+.daily-traffic h2 {
+  flex-basis: 100%;
+}
+.daily-traffic p {
+  flex-basis: 100%;
+  justify-content: center;
+  display: flex;
+  height: 150px;
+  align-items: center;
+}
+
+.mobile-users {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px 19px 15px 19px;
+  border-bottom: 1px solid grey;
+}
+.mobile-users h2 {
+  flex-basis: 100%;
+}
+.mobile-users p {
+  flex-basis: 100%;
+  justify-content: center;
+  display: flex;
+  height: 150px;
+  align-items: center;
+}
+
+.social-stats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px 19px 15px 19px;
+  border-bottom: 1px solid grey;
+}
+.social-stats h2 {
+  flex-basis: 100%;
 }
 
 .flexing-socials {
-  margin: 10px 19px;
-  padding: 5px;
+  display: flex;
+  flex-basis: 100%;
+  margin: 10px;
   border: 1px solid #c5c5c5;
   border-radius: 10px;
-  background-color: rgba(173, 169, 169, 0.4);
-  display: flex;
-  flex-direction: row;
+  background-color: rgba(173, 169, 169, 0.189);
   height: 80px;
   color: rgba(9, 0, 80, 0.678);
   fill: rgba(9, 0, 80, 0.678);
@@ -68,7 +120,7 @@ header p {
   align-items: flex-start;
 }
 .flexing-socials-numbers {
-  margin: 1px;
+  margin: 0px;
   font-size: 2.2em;
   font-weight: 400;
   color: rgba(57, 57, 57, 0.6666666667);
@@ -79,20 +131,18 @@ header p {
   margin-bottom: 14px;
 }
 
-.traffic-buttons {
+.traffic button {
   display: flex;
-  justify-content: space-evenly;
   justify-content: center;
-}
-
-.traffic-buttons button {
-  border-width: inherit;
+  flex-basis: 25%;
+  align-items: center;
+  height: 2em;
+  padding: 0;
+  border: none;
   background-color: white;
   font: 1em "Open Sans", sans-serif;
-  padding: 0.5em;
-  margin: auto 5px;
 }
-.traffic-buttons button:hover, .traffic-buttons button:focus {
+.traffic button:hover, .traffic button:focus {
   background-color: #46bc46;
   color: white;
   border-radius: 20px;

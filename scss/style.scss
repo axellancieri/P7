@@ -21,7 +21,7 @@ h2 {
   font: bold 1.1em "Open Sans", sans-serif;
   letter-spacing: 1px;
   main & {
-    margin: 15px 19px;
+    margin: 15px 0;
   }
 
 }
@@ -37,46 +37,86 @@ header p {
   margin: auto 9px;
 }
 
-.flexing {
+.dashboard {
   display: flex;
+  & .grey-space {
+    flex-grow: 1;
+    background-color: grey;
+  }
 }
 
-.grey-space {
-  flex-grow: 1;
-  display: inline-block;
-  border: 1px solid grey;
-  padding: 1em;
-  background-color: grey;
-}
-
-.flexing-traffic {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-bottom: 15px;
-  border-bottom: 1px solid grey;
-}
-
-// .daily-traffic {
-//   display: flex;
-//   flex-direction: column;
-//   flex-wrap: wrap;
-//   padding-bottom: 15px;
-//   border-bottom: 1px solid grey;
-// }
-
-// .daily-traffic-graphic {
-
-// }
-
-.flexing-socials {
-  margin: 10px 19px;
-  padding: 5px;
-  border: 1px solid #c5c5c5;
-  border-radius: 10px;
-  background-color: rgb(173 169 169 / 40%);
+.traffic {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px 19px 15px 19px;
+  border-bottom: 1px solid grey;
+  & h2 {
+    flex-basis: 100%;
+  }
+  & p {
+    flex-basis: 100%;
+    justify-content: center;
+    display: flex;
+    height: 150px;
+    align-items: center;
+  }
+}
+
+.daily-traffic {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px 19px 15px 19px;
+  border-bottom: 1px solid grey;
+  & h2 {
+    flex-basis: 100%;
+  }
+  & p {
+    flex-basis: 100%;
+    justify-content: center;
+    display: flex;
+    height: 150px;
+    align-items: center;
+  }
+}
+
+.mobile-users {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px 19px 15px 19px;
+  border-bottom: 1px solid grey;
+  & h2 {
+    flex-basis: 100%;
+  }
+  & p {
+    flex-basis: 100%;
+    justify-content: center;
+    display: flex;
+    height: 150px;
+    align-items: center;
+  }
+}
+
+.social-stats {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0px 19px 15px 19px;
+  border-bottom: 1px solid grey;
+  & h2 {
+    flex-basis: 100%;
+  }
+}
+
+.flexing-socials {
+  display: flex;
+  flex-basis: 100%;
+  margin: 10px;
+  border: 1px solid #c5c5c5;
+  border-radius: 10px;
+  background-color: rgba(173, 169, 169, 0.189);
   height: 80px;
   color: $secondary-color;
   fill: $secondary-color;
@@ -87,7 +127,7 @@ header p {
     align-items: flex-start;
   }
   &-numbers {
-    margin: 1px;
+    margin: 0px;
     font-size: 2.2em;
     font-weight: 400;
     color: #393939aa;
@@ -99,17 +139,16 @@ header p {
   margin-bottom: 14px;
 }
 
- .traffic-buttons {
+.traffic button {
     display: flex;
-    justify-content: space-evenly;
     justify-content: center;
- }
- .traffic-buttons button {
-    border-width: inherit;
+    flex-basis: 25%;
+    align-items: center;
+    height: 2em;
+    padding: 0;
+    border: none;
     background-color: white;
     font: 1em "Open Sans", sans-serif;
-    padding: .5em;
-    margin: auto 5px;
    &:hover, &:focus {
      background-color: #46bc46;
      color: white;
