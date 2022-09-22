@@ -1,0 +1,25 @@
+// vars
+
+$primary-color: rgba(76, 71, 175, 0.776);
+
+// mixins
+
+
+@mixin flexing (
+    $dis: flex,
+    $dire: null,
+    $wrap: null,
+    $basis: null,
+    $justCont: null,
+    $alignItem: null,
+    $alignCont: null) {
+    display: $dis;
+    flex-direction: $dire;
+    flex-wrap: $wrap;
+    flex-basis: $basis;
+    justify-content: $justCont;
+    align-items: $alignItem;
+    @content;
+
+}
+

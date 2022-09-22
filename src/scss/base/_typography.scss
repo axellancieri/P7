@@ -1,0 +1,69 @@
+body {
+    font: 1em "Open Sans", sans-serif;
+}
+
+h1 {
+    font: 1.1em "Open Sans", sans-serif;
+    
+}
+
+h2 {
+    font: bold 1.1em "Open Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: .95em;
+}
+
+h3 {
+    font: bold 1em "Open Sans", sans-serif;
+}
+
+.message-label {
+    font: bold 1em "Open Sans", sans-serif;
+  }
+
+.btn-message {
+    font: 400 140%/1.5 "Open Sans", sans-serif;
+    text-transform: capitalize;
+}
+
+.btn-settings {
+    font: 400 140%/1.5 "Open Sans", sans-serif;
+    text-transform: capitalize;
+}
+
+.flexing-members a {
+    font-style: normal;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+  
+.flexing-members p {
+    text-align: center;
+    font-size: .9em;
+}
+
+.settings label {
+    font: 400 100%/1 "Open Sans", sans-serif;
+}
+
+.flexing-socials {
+    &-title {
+        font: bold 1.1em "Open Sans", sans-serif;
+    }
+    &-numbers {
+        margin: 0px;
+        font-size: 2.2em;
+        font-weight: 400;
+    }
+}
+
+.traffic button {
+    font: 1em "Open Sans", sans-serif;
+  }
+
+header p {
+    font-size: .8em;
+}
