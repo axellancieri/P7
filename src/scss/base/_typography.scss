@@ -24,12 +24,13 @@ h3 {
 
 .btn-message {
     font: 400 140%/1.5 "Open Sans", sans-serif;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 
 .btn-settings {
-    font: 400 140%/1.5 "Open Sans", sans-serif;
-    text-transform: capitalize;
+    font: 400 100%/1.5 "Open Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .flexing-members a {
@@ -67,3 +68,12 @@ h3 {
 header p {
     font-size: .8em;
 }
+
+.time-zone {
+    font-size: 100%;
+    letter-spacing: 1px;
+  }
+  select:required:invalid {
+    font-size: 100%;
+    letter-spacing: 1px;
+  }

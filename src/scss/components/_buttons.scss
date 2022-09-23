@@ -14,13 +14,17 @@
 .btn-settings {
     margin: 10px 0px;
     cursor: pointer;
-    height: 2.2em;
+    height: 3em;
     flex-basis: 45%;
     color: rgba(255, 255, 255, 0.918);
     background-color: $primary-color;
     outline: none;
     border: 1px solid rgba(128, 128, 128, 0.34);
     border-radius: 5px;
+}
+
+#cancel-button-color {
+        background-color: rgba(132, 124, 124, 0.752);
 }
 
 .traffic button {
