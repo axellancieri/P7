@@ -1,47 +1,47 @@
 @use 'abstracts' as *;
 
 .new-members-images {
-    width: 4em;
-    border-radius: 50%;
-  }
+  width: 4em;
+  border-radius: 50%;
+}
 
 // SVG manipulation
 
 .svg-head-bell {
-    margin: auto;
-    padding-top: 13px;
-    width: 7%;
-    fill: white;
-  }
-    
-  .svg-head-student-image {
-    margin-right: 1px;
-    width: 12%;
-    border-left: 1px solid rgba(255, 255, 255, 0.486);
-    padding-left: 7px;
-  }
+  margin: auto;
+  padding-top: 13px;
+  width: 7%;
+  fill: white;
+}
   
-  .header-image {
-    width: 100%;
-    border-radius: 50%;
-  }
-  
-  .svg-nav-icons {
-    width: 11%;
-    fill: white;
-    margin: 9px 14px 5px
-  }
-  
-  .svg-social-icons {
-    margin: 12px;
-    @include flexing($basis: 20%) {
-      order: -1;
-    };
-  }
+.svg-head-student-image {
+  margin-right: 1px;
+  width: 12%;
+  border-left: 1px solid rgba(255, 255, 255, 0.486);
+  padding-left: 7px;
+}
 
-  .traffic-graphic {
-    @include flexing(
-      $alignItem: center, 
-      $justCont: center);
-    height: 150px;
-  }
+.header-image {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.svg-nav-icons {
+  width: 11%;
+  fill: white;
+  margin: 9px 14px 5px
+}
+
+.svg-social-icons {
+  margin: 12px;
+  @include flexing($basis: 20%) {
+    order: -1;
+  };
+}
+
+.traffic-graphic {
+  @include flexing(
+    $alignItem: center, 
+    $justCont: center);
+  height: 150px;
+}

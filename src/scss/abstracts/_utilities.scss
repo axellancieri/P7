@@ -1,7 +1,20 @@
-// vars
+// vars and maps
 
 $primary-color: rgba(76, 71, 175, 0.776);
 
+$breakpoints: (
+    's': 320px,
+    'm': 768px,
+    'l': 1024px
+);
+
+$grids-areas: (
+    'header': header,
+    'nav': nav,
+    'main': main,
+    'aside': aside,
+    'footer': footer
+);
 // mixins
 
 
@@ -21,5 +34,44 @@ $primary-color: rgba(76, 71, 175, 0.776);
     align-items: $alignItem;
     @content;
 
+}
+
+// crazy mxin eachloo WOW
+
+// @mixin possibilities($map) {
+//     @each $loop, $loops in $map {
+//         &-#{$loop} {
+//             style: $loops;
+//         }
+//     }
+
+// }
+
+// media queries
+
+@mixin mq($break) {
+  $value: map-get($breakpoints, $break);
+  $s: map-get($breakpoints, 's');
+
+    @if ($value < $s) {
+        @media (max-width: $value) {
+            @content;
+        }    
+    } @else {
+        @media (min-width: $value) {
+            @content;
+        }
+    }
+}
+
+// loops
+
+
+// grid areas
+
+@each $grid, $areas in $grids-areas {
+    #{$grid} {
+        grid-area: $areas;
+    }
 }
 
