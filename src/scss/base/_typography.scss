@@ -1,21 +1,30 @@
+@use 'abstracts' as *;
+
 body {
     font: 1em "Open Sans", sans-serif;
 }
 
 h1 {
-    font: 1.8em "Open Sans", sans-serif;
-    
+    font: 1.1em "Open Sans", sans-serif; 
+    @include mq('m') {
+        font-size: 1.8em;
+    }
 }
 
 h2 {
-    font: bold 1.1em "Open Sans", sans-serif;
+    font: bold 1em "Open Sans", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-size: .95em;
+    @include mq('m') {
+        font-size: 1.4em;
+    }
 }
 
 h3 {
     font: bold 1em "Open Sans", sans-serif;
+    @include mq('m') {
+        font-size: 1.3em;
+    }
 }
 
 .message-label {
@@ -63,17 +72,24 @@ h3 {
 
 .traffic button {
     font: 1em "Open Sans", sans-serif;
+    @include mq('m') {
+        font-size: 1.3em;
+    }
   }
 
 header p {
     font-size: .8em;
+    @include mq('m') {
+        font-size: 1.1em;
+    }
 }
 
 .time-zone {
     font-size: 100%;
     letter-spacing: 1px;
-  }
-  select:required:invalid {
+}
+
+select:required:invalid {
     font-size: 100%;
     letter-spacing: 1px;
-  }
+}

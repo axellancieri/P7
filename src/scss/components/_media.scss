@@ -8,10 +8,15 @@
 // SVG manipulation
 
 .svg-head-bell {
+  @include flexing(
+    $basis: 7%);
   margin: auto;
-  padding-top: 13px;
-  width: 7%;
   fill: white;
+  @include mq('m') {
+    margin: 0 20px 10px;
+    align-self: flex-end;
+    flex-basis: 5%;
+  }
 }
   
 .svg-head-student-image {
@@ -19,17 +24,29 @@
   width: 12%;
   border-left: 1px solid rgba(255, 255, 255, 0.486);
   padding-left: 7px;
+  @include mq('m') {
+    @include flexing(
+      $justCont: center);
+    margin-right: 0px;
+  }
 }
 
 .header-image {
   width: 100%;
   border-radius: 50%;
+  @include mq('m') {
+    flex-basis: 84%;
+  }
 }
 
 .svg-nav-icons {
   width: 11%;
   fill: white;
-  margin: 9px 14px 5px
+  margin: 9px 14px 5px;
+  @include mq('m') {
+    width: 52%;
+    margin: 25px 0 0;
+  }
 }
 
 .svg-social-icons {

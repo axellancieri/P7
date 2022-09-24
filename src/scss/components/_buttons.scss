@@ -36,6 +36,10 @@
     padding: 0;
     border: none;
     background-color: white;
+    @include mq('m') {
+        flex-grow: 1;
+        flex-basis: 0;
+    }
     &:hover, &:focus {
     background-color: #46bc46;
     color: white;
