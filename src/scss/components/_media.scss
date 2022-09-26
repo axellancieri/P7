@@ -3,6 +3,9 @@
 .new-members-images {
   width: 4em;
   border-radius: 50%;
+  @include mq('m') {
+    width: 85px;
+  }
 }
 
 // SVG manipulation

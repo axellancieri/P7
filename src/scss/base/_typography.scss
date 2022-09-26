@@ -16,7 +16,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
     @include mq('m') {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 }
 
@@ -32,7 +32,7 @@ h3 {
   }
 
 .btn-message {
-    font: 400 140%/1.5 "Open Sans", sans-serif;
+    font: 400 120%/1.5 "Open Sans", sans-serif;
     text-transform: uppercase;
 }
 
@@ -53,6 +53,9 @@ h3 {
 .flexing-members p {
     text-align: center;
     font-size: .9em;
+    @include mq('m') {
+        text-align: inherit;
+    }
 }
 
 .settings label {

@@ -9,6 +9,9 @@
     outline: none;
     border: none;
     border-radius: 5px;
+    @include mq('m') {
+        height: 55px;
+    }
 }
 
 .btn-settings {
@@ -25,6 +28,9 @@
 
 #cancel-button-color {
         background-color: rgba(132, 124, 124, 0.752);
+        @include mq('m') {
+            margin-left: auto;
+        }
 }
 
 .traffic button {
@@ -39,6 +45,7 @@
     @include mq('m') {
         flex-grow: 1;
         flex-basis: 0;
+        margin: 10px
     }
     &:hover, &:focus {
     background-color: #46bc46;
@@ -57,6 +64,11 @@
     transition: background .3s;
     outline: none;
     cursor: pointer;
+    @include mq('m') {
+        height: 39px;
+        flex-basis: 15%;
+        margin-right: 198px;
+    }
     &::after {
         content: '';
         position: absolute;
