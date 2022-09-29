@@ -31,6 +31,13 @@ h3 {
     font: bold 1em "Open Sans", sans-serif;
   }
 
+.message-search,
+.textarea {
+    @include mq('l') {
+        font-size: 1.1em;
+    }
+}
+
 .btn-message {
     font: 400 120%/1.5 "Open Sans", sans-serif;
     text-transform: uppercase;
@@ -60,6 +67,9 @@ h3 {
 
 .settings label {
     font: 400 94%/1 "Open Sans", sans-serif;
+    @include mq ('l') {
+        font-size: 100%;
+      }
 }
 
 .flexing-socials {

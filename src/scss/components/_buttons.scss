@@ -13,6 +13,9 @@
     @include mq('m') {
         height: 55px;
     }
+    @include mq('l') {
+        flex-basis: 20%;
+    }
 }
 
 .btn-settings {
@@ -25,12 +28,23 @@
     outline: none;
     border: 1px solid rgba(128, 128, 128, 0.34);
     border-radius: 5px;
+    @include mq('l') {
+        margin: auto 0 0;
+        height: 15%;
+        flex-basis: 47%;
+        background-color: rgba(76, 71, 175, 0.68);
+        border: none;
+        border-radius: 5px;
+    }
 }
 
 #cancel-button-color {
     background-color: rgba(132, 124, 124, 0.752);
     @include mq('m') {
         margin-left: auto;
+    }
+    @include mq('l') {
+        margin-right: 5px;
     }
 }
 
@@ -92,9 +106,16 @@
     &:checked::after {
         left: 70%;
     }
-@include mq('m') {
-    height: 39px;
-    flex-basis: 15%;
-    margin-right: 41vw;
-}
+    @include mq('m') {
+        height: 39px;
+        flex-basis: 15%;
+        margin-right: 41vw;
+    }
+    @include mq('l') {
+        flex-basis: auto;
+        height: 6vh;
+        width: 10vw;
+        margin: 0 auto 0 0;
+        margin-top: 3vh;
+    }
 }

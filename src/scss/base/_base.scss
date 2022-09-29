@@ -32,11 +32,17 @@ fieldset {
 #no-border {
   border-top: none;
   padding-top: 10px;
+  @include mq('l') {
+    padding-top: 0;
+  }
 }
 
 #border-bottom {
   padding-bottom: 0px;
   @include mq('m') {
     padding-bottom: inherit;
+  }
+  @include mq('l') {
+    padding-bottom: 5px;
   }
 }
