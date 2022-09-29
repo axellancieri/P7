@@ -150,6 +150,7 @@
                             <p>Victoria Chambers commented on <strong>WebApp's SEO Tips</strong></p>
                             <p>4 hours ago</p>
                         </div>
+                        <p><span>></span></p>
                     </div>
                     <div class="flexing-members">
                         <img src="images/member-2.jpg" class="new-members-images">
@@ -157,6 +158,7 @@
                             <p>Dale Byrd liked the post <strong>Facebook's Changes for 2021</strong></p>
                             <p>5 hours ago</p>
                         </div>
+                        <p><span>></span></p>
                     </div>
                     <div class="flexing-members">
                         <img src="images/member-3.jpg" class="new-members-images">
@@ -164,6 +166,7 @@
                             <p>Dawn Good commented on <strong>Facebook's Changes for 2021</strong></p>
                             <p>5 hours ago</p>
                         </div>
+                        <p><span>></span></p>
                     </div>
                     <div class="flexing-members" id="border-bottom">
                         <img src="images/member-4.jpg" class="new-members-images">
@@ -171,40 +174,43 @@
                             <p>Dan Oliver posted <strong>WebApp's SEO Tips</strong></p>
                             <p>1 day ago</p>
                         </div>
+                        <p><span>></span></p>
                     </div> 
             </section>
         </aside>   
         <footer>
-            <section class="message-us">
+            <form>
+                <fieldset class="message-us">
+                    <h2>Message User</h2>
+                        <label for="searchUser" class="message-label"></label>
+                        <input type="search" id="searchUser" class="message-search" name="search_user" placeholder="Search for User" required>
 
-                <label for="searchUser" class="message-label">Message User</label>
-                <input type="search" id="searchUser" class="message-search" name="search_user" placeholder="Search for User" required>
+                        <textarea class="textarea" name="text_user" placeholder="Message for User" required></textarea>
 
-                <textarea class="textarea" name="text_user" rows="6" placeholder="Message for User" required></textarea>
+                        <button type="sumbit" class="btn-message">Send</button>
+                </fieldset>
+                <fieldset class="settings">
+                    <h2>Settings</h2>
 
-                <button type="sumbit" class="btn-message">Send</button>
+                        <label>Send Email Notifications</label>
+                        <input type="checkbox" class="checkbox" placeholder="
+                        ON">
 
-            </section>
-            <section class="settings">
+                        <label>Set Profile to Public</label>
+                        <input type="checkbox" class="checkbox">
 
-                <h2>Settings</h2>
+                        <select name="time_zone" class="time-zone" required>
+                            <option value="" disabled selected>Select Timezone</option>
+                            <option value="est">EST</option>
+                            <option value="pst">PST</option>
+                            <option value="ct">CT</option>
+                            <option value="mnt">MNT</option>
+                        </select>
 
-                    <label>Send Email Notifications</label>
-                    <input type="checkbox" class="checkbox">
-
-                    <label>Set Profile to Public</label>
-                    <input type="checkbox" class="checkbox">
-
-                    <select name="time_zone" class="time-zone" required>
-                        <option value="" disabled selected>Select Timezone</option>
-                        <option value="est">EST</option>
-                        <option value="pst">PST</option>
-                        <option value="ct">CT</option>
-                        <option value="mnt">MNT</option>
-                    </select>
-
-                    <button class="btn-settings">Save</button><button class="btn-settings" id="cancel-button-color">Cancel</button>
-            </section>
+                        <button class="btn-settings">Save</button>
+                        <button class="btn-settings" id="cancel-button-color">Cancel</button>
+                </fieldset>
+            </form>
         </footer>  
 </body>
 </html>

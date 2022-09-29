@@ -23,6 +23,12 @@ h3 {
     margin: 14px;
 }
 
+fieldset {
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
 #no-border {
   border-top: none;
   padding-top: 10px;
@@ -30,4 +36,7 @@ h3 {
 
 #border-bottom {
   padding-bottom: 0px;
+  @include mq('m') {
+    padding-bottom: inherit;
+  }
 }

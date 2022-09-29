@@ -20,6 +20,10 @@
     align-self: flex-end;
     flex-basis: 5%;
   }
+  @include mq('l') {
+    margin-bottom: 7px;
+    flex-basis: 3%;
+  }
 }
   
 .svg-head-student-image {
@@ -32,6 +36,11 @@
       $justCont: center);
     margin-right: 0px;
   }
+  @include mq('l') {
+    width: 6em;
+    height: 3.5em;
+    padding-left: 0;
+  }
 }
 
 .header-image {
@@ -39,6 +48,10 @@
   border-radius: 50%;
   @include mq('m') {
     flex-basis: 84%;
+  }
+  @include mq('l') {
+    flex-basis: 50%;
+    width: auto;
   }
 }
 

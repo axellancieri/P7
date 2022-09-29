@@ -1,11 +1,12 @@
 @use 'abstracts' as *;
 
 .btn-message {
-    margin: 10px 0px;
+    flex-basis: 100%;
+    padding: 10px 0;
+    margin-top: 10px;
     cursor: pointer;
-    height: 60px;
     color: rgba(255, 255, 255, 0.918);
-    background-color: $primary-color;
+    background-color: rgba(76, 71, 175, 0.68);
     outline: none;
     border: none;
     border-radius: 5px;
@@ -27,14 +28,14 @@
 }
 
 #cancel-button-color {
-        background-color: rgba(132, 124, 124, 0.752);
-        @include mq('m') {
-            margin-left: auto;
-        }
+    background-color: rgba(132, 124, 124, 0.752);
+    @include mq('m') {
+        margin-left: auto;
+    }
 }
 
 .traffic button {
-      @include flexing(
+    @include flexing(
       $basis: 25%,
       $justCont: center,
       $alignItem: center);
@@ -42,15 +43,24 @@
     padding: 0;
     border: none;
     background-color: white;
+    &:hover, &:focus {
+        background-color: #46bc46;
+        color: white;
+        border-radius: 20px;
+    }
     @include mq('m') {
         flex-grow: 1;
         flex-basis: 0;
-        margin: 10px
+        // margin: 5px;
+        padding: 10px;
     }
-    &:hover, &:focus {
-    background-color: #46bc46;
-    color: white;
-    border-radius: 20px;
+    @include mq('l') {
+        flex-grow: 0;
+        flex-basis: 5%;
+        font-size: 1em;
+        & + button {
+            margin-left: 5px;
+        }
     }
 }
 
@@ -64,11 +74,6 @@
     transition: background .3s;
     outline: none;
     cursor: pointer;
-    @include mq('m') {
-        height: 39px;
-        flex-basis: 15%;
-        margin-right: 198px;
-    }
     &::after {
         content: '';
         position: absolute;
@@ -80,11 +85,16 @@
         width: 1.25rem;
         background-color: white;
         transition: left .3s;
-}
-&:checked {
-    background-color: rgb(141, 221, 141);
-}
-&:checked::after {
-    left: 70%;
+    }
+    &:checked {
+        background-color: rgb(141, 221, 141);
+    }
+    &:checked::after {
+        left: 70%;
+    }
+@include mq('m') {
+    height: 39px;
+    flex-basis: 15%;
+    margin-right: 41vw;
 }
 }

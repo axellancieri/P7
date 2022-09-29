@@ -16,7 +16,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
     @include mq('m') {
-        font-size: 1.2em;
+        font-size: .9em;
     }
 }
 
@@ -59,7 +59,7 @@ h3 {
 }
 
 .settings label {
-    font: 400 100%/1 "Open Sans", sans-serif;
+    font: 400 94%/1 "Open Sans", sans-serif;
 }
 
 .flexing-socials {
@@ -78,6 +78,9 @@ h3 {
     @include mq('m') {
         font-size: 1.3em;
     }
+    @include mq('l') {
+        font-size: 1em;
+      }
   }
 
 header p {
@@ -88,11 +91,9 @@ header p {
 }
 
 .time-zone {
-    font-size: 100%;
-    letter-spacing: 1px;
+    font-size: 95%;
 }
 
 select:required:invalid {
     font-size: 100%;
-    letter-spacing: 1px;
 }
