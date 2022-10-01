@@ -30,11 +30,11 @@
     border-radius: 5px;
     @include mq('l') {
         margin: auto 0 0;
-        height: 15%;
         flex-basis: 47%;
         background-color: rgba(76, 71, 175, 0.68);
         border: none;
         border-radius: 5px;
+        height: 3.6em;
     }
 }
 
@@ -113,9 +113,8 @@
     }
     @include mq('l') {
         flex-basis: auto;
-        height: 6vh;
-        width: 10vw;
-        margin: 0 auto 0 0;
-        margin-top: 3vh;
+        height: 50px;
+        width: 120px;
+        margin: 2vh auto 2vw 15px;
     }
 }

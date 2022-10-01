@@ -155,10 +155,11 @@ h3 {
 
 .flexing-socials-title {
   font: bold 1.1em "Open Sans", sans-serif;
+  font-size: 1.3em;
 }
 .flexing-socials-numbers {
   margin: 0px;
-  font-size: 2.2em;
+  font-size: 3.2em;
   font-weight: 400;
 }
 
@@ -200,7 +201,7 @@ select:required:invalid {
     flex-wrap: nowrap;
     justify-content: center;
     padding-bottom: 10px;
-    height: 55vh;
+    height: 100%;
   }
 }
 
@@ -233,7 +234,6 @@ select:required:invalid {
     border-bottom: none;
     align-content: space-between;
     align-items: stretch;
-    height: auto;
   }
 }
 
@@ -287,7 +287,7 @@ select:required:invalid {
 @media (min-width: 1024px) {
   .textarea {
     flex-basis: 60%;
-    margin: 19px 0 0;
+    margin: 19px 0 15px;
   }
 }
 .textarea input::placeholder {
@@ -315,10 +315,11 @@ select:required:invalid {
 @media (min-width: 1024px) {
   .settings label {
     display: flex;
-    flex-basis: 50%;
-    align-items: center;
-    height: 6vh;
-    margin-top: 3vh;
+    flex-basis: 45%;
+    align-items: initial;
+    height: 11%;
+    margin-top: 2vh;
+    margin-bottom: 5px;
   }
 }
 .settings h2 {
@@ -333,7 +334,6 @@ select:required:invalid {
   .settings {
     flex-basis: 50%;
     flex-grow: 1;
-    align-items: flex-start;
     padding: 0 10px 0 15px;
     margin-bottom: 0;
     row-gap: 0;
@@ -353,8 +353,10 @@ select:required:invalid {
 }
 @media (min-width: 1024px) {
   .time-zone {
+    flex-basis: 100%;
     margin-right: 5px;
-    margin-top: 10vh;
+    margin-top: 4vh;
+    margin-bottom: 18px;
   }
 }
 
@@ -642,7 +644,7 @@ nav {
 
 .new-members {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   padding: 0px 19px 15px 19px;
@@ -659,13 +661,11 @@ nav {
 @media (min-width: 768px) {
   .new-members {
     padding: 10px;
-    flex-direction: column;
     flex-wrap: nowrap;
   }
 }
 @media (min-width: 1024px) {
   .new-members {
-    flex-direction: column;
     flex-basis: 50%;
     flex-grow: 1;
     flex-wrap: nowrap;
@@ -741,6 +741,7 @@ nav {
     flex-wrap: nowrap;
     height: 15vh;
     padding: 5px 0;
+    max-height: 105px;
   }
 }
 
@@ -792,6 +793,30 @@ nav {
   }
 }
 
+#no-border {
+  border-top: none;
+  padding-top: 10px;
+}
+@media (min-width: 1024px) {
+  #no-border {
+    padding-top: 0;
+  }
+}
+
+#border-bottom {
+  padding-bottom: 0px;
+}
+@media (min-width: 768px) {
+  #border-bottom {
+    padding-bottom: inherit;
+  }
+}
+@media (min-width: 1024px) {
+  #border-bottom {
+    padding-bottom: 5px;
+  }
+}
+
 .btn-message {
   flex-basis: 100%;
   padding: 10px 0;
@@ -828,11 +853,11 @@ nav {
 @media (min-width: 1024px) {
   .btn-settings {
     margin: auto 0 0;
-    height: 15%;
     flex-basis: 47%;
     background-color: rgba(76, 71, 175, 0.68);
     border: none;
     border-radius: 5px;
+    height: 3.6em;
   }
 }
 
@@ -922,10 +947,9 @@ nav {
 @media (min-width: 1024px) {
   .checkbox {
     flex-basis: auto;
-    height: 6vh;
-    width: 10vw;
-    margin: 0 auto 0 0;
-    margin-top: 3vh;
+    height: 50px;
+    width: 120px;
+    margin: 2vh auto 2vw 15px;
   }
 }
 
@@ -955,7 +979,7 @@ nav {
 @media (min-width: 1024px) {
   .svg-head-bell {
     margin-bottom: 7px;
-    flex-basis: 3%;
+    flex-basis: 2.1%;
   }
 }
 
