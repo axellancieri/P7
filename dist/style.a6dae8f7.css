@@ -443,6 +443,30 @@ header p {
   }
 }
 
+#notif-alert {
+  font-size: 0.9em;
+  margin-left: 0.5em;
+  display: flex;
+  flex-basis: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: green;
+  margin: 1em;
+  border-radius: 10px;
+  color: white;
+}
+#notif-alert p {
+  display: flex;
+  flex-basis: auto;
+  margin-left: 1em;
+}
+#notif-alert span {
+  display: flex;
+  flex-basis: 10%;
+  justify-content: flex-end;
+  margin-right: 1em;
+}
+
 .traffic {
   display: flex;
   flex-direction: row;
