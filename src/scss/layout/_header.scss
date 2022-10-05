@@ -1,0 +1,16 @@
+@use 'abstracts' as *;
+
+header {
+    @include flexing(
+        $dire: row,
+        $wrap: wrap);
+    padding: 11px 0px;
+    background-color: $primary-color;
+    p {
+        color: white;
+        margin: auto 9px auto 0;
+    }
+    @include mq('l') {
+        align-content: center;
+    }
+}

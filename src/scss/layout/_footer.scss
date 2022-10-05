@@ -1,0 +1,158 @@
+@use 'abstracts' as *;
+
+.messageUser-settings {
+  @include mq('l') {
+    @include flexing(
+      $dire: row,
+      $wrap: nowrap,
+      $justCont: center);
+    padding-bottom: 10px;
+    height: 100%;
+  }
+}
+// look int that, I think its doing nothing .message-label
+.message-label {
+    margin-bottom: 14px;
+}
+
+.message-us {
+  @include flexing(
+    $dire: column,
+    $wrap: wrap);
+  padding: 10px 19px 20px 19px;
+  border-bottom: 1px solid rgba(161, 160, 160, 0.445);
+  h2 {
+    margin: 12px 0;
+  }
+  @include mq('m') {
+    padding-bottom: 20px;
+  }
+  @include mq('l') {
+    flex-wrap: nowrap;
+    flex-basis: 50%;
+    flex-grow: 1;
+    padding: 0 15px 0 10px;
+    border-right: 1px solid grey;
+    border-bottom: none;
+    align-content: space-between;
+    align-items: stretch;
+  }
+}
+  
+.message-search {
+  margin: 5px 0px;
+  padding: 1px 10px;
+  height: 30px;
+  background-color: #c1bbbb26;
+  border-radius: 5px;
+  border: 1px solid rgba(152, 152, 152, 0.693);
+  outline: none;
+  color: $footer-color-text;
+  &::placeholder {
+    color: $footer-color-text;
+  }
+  @include mq('m') {
+    margin: 0 0 10px;
+    height: 6vh;
+  }
+  @include mq('l') {
+    margin: 0;
+    flex-basis: 26%;
+  }
+}
+
+.textarea {
+  margin: 5px 0px;
+  padding: 10px;
+  height: 20vh;
+  background-color: #c1bbbb26;
+  border-radius: 5px;
+  border: 1px solid rgba(152, 152, 152, 0.693);
+  outline: none;
+  overflow: auto;
+  resize: vertical;
+  font-family: "Open Sans", sans-serif;
+  color: $footer-color-text;
+  &::placeholder {
+    color: $footer-color-text;
+  }
+  @include mq('m') {
+    height: 23vh;
+  }
+  @include mq('l') {
+    flex-basis: 60%;
+    margin: 19px 0 15px;
+  }
+  input::placeholder {
+    color: $footer-color-text;
+  }
+}
+
+.settings {
+  @include flexing(
+    $wrap: wrap,
+    $dire: row,
+    $justCont: space-between,
+    $alignItem: center,
+    $alignCont: space-between) {
+      row-gap: 1em;
+    }
+  padding: 0 19px;
+  margin-bottom: 10px;
+  label {
+    flex-basis: 70%;
+    @include mq('m') {
+      flex-basis: 35%;
+    }
+    @include mq ('l') {
+      @include flexing(
+        $basis: 45%,
+        $alignItem: initial);
+      height: 11%;      
+      margin-top: 2vh;
+      margin-bottom: 5px;
+    }
+  }
+  h2 {
+    flex-basis: 100%;
+  }
+  @include mq('m') {
+    justify-content: flex-start;
+  }
+  @include mq('l') {
+    flex-basis: 50%;
+    flex-grow: 1;
+    padding: 0 10px 0 15px;
+    margin-bottom: 0;
+    row-gap: 0;
+  }
+  
+}
+
+.time-zone {
+  flex-basis: 100%;
+  outline: none;
+  height: 2.7em;
+  margin-top: 20px;
+  background-color: #c1bbbb26;
+  border-radius: 5px;
+  border: 1px solid rgba(152, 152, 152, 0.426);
+  color: $footer-color-text;
+  padding-left: 8px;
+  @include mq('l') {
+    flex-basis: 100%;
+    margin-right: 5px;
+    margin-top: 4vh;
+    margin-bottom: 18px;
+  }
+}
+select:required:invalid {
+  color: $footer-color-text
+}
+
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: $footer-color-text;
+}

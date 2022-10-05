@@ -1,0 +1,155 @@
+@use 'abstracts' as *;
+
+.members {
+    @include mq('l') {
+        @include flexing(
+            $dire: row,
+            $wrap: nowrap,
+            $justCont: space-between);
+        border-bottom: 1px solid grey;
+    }
+}
+
+.new-members {
+    @include flexing(
+        $dire: column,
+        $wrap: wrap,
+        $justCont: center);
+    padding: 0px 19px 15px 19px;
+    border-bottom: 1px solid grey;
+    h2 {
+        flex-basis: 100%; 
+        @include mq('l') {
+            flex-basis: auto;
+        }  
+    }
+    @include mq('m') {
+        padding: 10px;
+        flex-wrap: nowrap;
+    }
+    @include mq('l') {
+        flex-basis: 50%;
+        flex-grow: 1;
+        flex-wrap: nowrap;
+        border: none;
+        padding: 0 15px 0 10px;
+        border-right: 1px solid grey;
+    }
+}
+  
+.flexing-members {
+    @include flexing(
+        $dire: column,
+        $alignItem: center) {
+        flex-grow: 1;
+        }
+    border-top: 1px solid rgba(174, 172, 172, 0.427);
+    padding: 25px 0 20px;
+    a {
+        color: black;
+        margin-top: 0;
+    }
+    p {
+        margin: 5px auto auto;
+        @include mq('l') {
+            margin: auto;
+        }
+    }
+    & > p {
+        margin: 0;
+        @include mq('m') {
+            margin: 0 0 0 auto;
+        }
+    }
+    & > p span {
+        display: none;
+        @include mq('m') {
+            display: block;
+            font-size: 1.5em;
+            color: $primary-color; 
+        }
+        @include mq('l') {
+            padding-right: 10px;
+        }
+    }
+    .recent-activity-margin {
+        @include mq('m') {
+            margin-left: 3%;
+        }
+        @include mq('l') {
+            margin: 0 3% 0 4%;
+        }
+    }
+    @include mq('m') {
+        padding: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    @include mq('l') {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        height: 15vh;
+        padding: 5px 0;
+        max-height: 105px;
+    }
+}
+
+.aside-text {
+    @include mq('m') {
+        @include flexing(
+            $dire: row,
+            $wrap: wrap,
+            $alignItem: center);
+        margin-left: 3%;
+    p {
+        margin: 0;
+    }
+    a {
+        color: black;
+        margin-top: 0;
+        flex-basis: 100%;
+    }
+    }
+}   
+
+.recent-activity {
+    @include flexing(
+        $dire: row,
+        $wrap: wrap);
+    padding: 10px 19px 25px 19px;
+    border-bottom: 1px solid grey;
+    h2 {
+        flex-basis: 100%;
+        @include mq('l') {
+            flex-basis: auto;
+        }  
+    }
+    @include mq('m') {
+        padding: 10px;
+    }
+    @include mq('l') {
+        flex-direction: column;
+        flex-basis: 50%;
+        flex-wrap: nowrap;
+        padding: 0 10px 0 15px;
+        border: none;
+    }
+}
+
+#no-border {
+    border-top: none;
+    padding-top: 10px;
+    @include mq('l') {
+      padding-top: 0;
+    }
+  }
+  
+#border-bottom {
+    padding-bottom: 0px;
+    @include mq('m') {
+        padding-bottom: inherit;
+    }
+    @include mq('l') {
+        padding-bottom: 5px;
+    }
+}

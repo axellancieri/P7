@@ -1,0 +1,80 @@
+@use 'abstracts' as *;
+
+.new-members-images {
+  width: 4em;
+  border-radius: 50%;
+  @include mq('m') {
+    width: 85px;
+  }
+}
+
+// SVG manipulation
+
+.svg-head-bell {
+  @include flexing(
+    $basis: 7%);
+  margin: auto;
+  fill: white;
+  @include mq('m') {
+    margin: 0 20px 10px;
+    align-self: flex-end;
+    flex-basis: 5%;
+  }
+  @include mq('l') {
+    margin-bottom: 7px;
+    flex-basis: 2.1%;
+  }
+}
+  
+.svg-head-student-image {
+  margin-right: 1px;
+  width: 12%;
+  border-left: 1px solid rgba(255, 255, 255, 0.486);
+  padding-left: 7px;
+  @include mq('m') {
+    @include flexing(
+      $justCont: center);
+    margin-right: 0px;
+  }
+  @include mq('l') {
+    width: 6em;
+    height: 3.5em;
+    padding-left: 0;
+  }
+}
+
+.header-image {
+  width: 100%;
+  border-radius: 50%;
+  @include mq('m') {
+    flex-basis: 84%;
+  }
+  @include mq('l') {
+    flex-basis: 50%;
+    width: auto;
+  }
+}
+
+.svg-nav-icons {
+  width: 11%;
+  fill: white;
+  margin: 9px 14px 5px;
+  @include mq('m') {
+    width: 52%;
+    margin: 25px 0 0;
+  }
+}
+
+.svg-social-icons {
+  margin: 12px;
+  @include flexing($basis: 20%) {
+    order: -1;
+  };
+}
+
+.traffic-graphic {
+  @include flexing(
+    $alignItem: center, 
+    $justCont: center);
+  height: 150px;
+}

@@ -1,0 +1,28 @@
+@use 'abstracts' as *;
+    
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: minmax(30px, auto);
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "aside"
+        "footer";
+    @include mq('m') {
+            grid-template-columns: 90px minmax(200px, auto);
+            grid-auto-rows: minmax(100px, auto) minmax(50px, auto);
+            grid-template-areas:
+                "header header"
+                "nav main"
+                "nav aside"
+                "nav footer";
+    }
+    @include mq('l') {
+        grid-auto-rows: minmax(80px, auto) minmax(50px, auto);
+        grid-template-columns: 75px minmax(200px, auto);
+    }
+}
+
+// grid areas given on _utilies using each loop

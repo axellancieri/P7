@@ -1,0 +1,16 @@
+@use 'abstracts' as *;
+
+nav {
+  @include flexing(
+    $wrap: wrap,
+    $dire: row,
+    $justCont: center);
+  background-color: rgba(9, 0, 80, 0.678);
+  @include mq('m') {
+    @include flexing(
+      $dire: column,
+      $wrap: nowrap,
+      $justCont: flex-start,
+      $alignItem: center);
+  }
+}

@@ -1,0 +1,195 @@
+@use '../abstracts' as *;
+
+main {
+  @include mq('m') {
+    @include flexing(
+      $dire: row,
+      $wrap: wrap);
+  }
+}
+
+.dashboard {
+  @include flexing();
+  background-color: white;
+  .grey-space {
+    flex-grow: 1;
+    background-color: rgba(224, 223, 223, 0.393);
+    border-left: 1px solid rgba(239, 237, 237, 0.709);
+    border-bottom: 1px solid rgba(239, 237, 237, 0.709);
+  }
+  h3 {
+    align-self: center;
+    padding: 10px;
+  }
+  @include mq('m') {
+    height: 8%;
+    flex-basis: 100%;
+  }
+  @include mq('l') {
+    height: 7.5%;
+  }
+}
+    
+#notif-alert {
+  @include flexing(
+    $justCont: space-between,
+    $alignItem: center,
+    $basis: 100%);
+  background-color: green;
+  margin: 1em;
+  border-radius: 10px;
+  color: white;
+  p {
+    @include flexing(
+      $basis: auto);
+    margin-left: 1em;
+  }
+  span {
+    @include flexing(
+      $justCont: flex-end,
+      $basis: 10%);
+    margin-right: 1em;
+  }
+}
+
+.traffic {
+  @include flexing(
+    $dire: row,
+    $wrap: wrap);
+  padding: 0px 19px 15px 19px;
+  border-bottom: 1px solid #80808070;
+  h2 {
+    flex-basis: 100%;
+    @include mq('m') {
+      flex-basis: 40%;
+    }
+    @include mq('l') {
+      margin-right: auto;
+    }
+  }
+  p {
+    @include flexing(
+      $basis: 100%,
+      $justCont: center,
+      $alignItem: center);
+    height: 150px;
+    @include mq('m') {
+      height: 200px;
+    }
+  }
+  @include mq('m') {
+    @include flexing(
+      $alignItem: center);    
+    padding: 10px;
+    flex-basis: 100%;
+  }
+  @include mq('l') {
+    justify-content: flex-end;
+  }
+}
+
+.daily-traffic {
+  @include flexing(
+    $dire: row,
+    $wrap: wrap);
+  padding: 0px 19px 15px 19px;
+  border-bottom: 1px solid grey;
+  h2 {
+    flex-basis: 100%;
+  }
+  p {
+    @include flexing(
+      $basis: 100%,
+      $justCont: center,
+      $alignItem: center);
+    height: 150px;
+    @include mq('m') {
+      height: 200px;
+    }
+  }
+  @include mq('m') {
+    padding: 10px 0px 10px 10px;
+    flex-basis: 47%;
+    border-right: 1px solid grey;
+  }
+  @include mq('l') {
+    padding: 0 15px 0 10px;
+    flex-basis: auto;
+    flex-grow: 1;
+  }
+}
+
+.mobile-users {
+  @include flexing(
+    $dire: row,
+    $wrap: wrap);
+  padding: 0px 19px 15px 19px;
+  border-bottom: 1px solid grey;
+  h2 {
+    flex-basis: 100%;
+  }
+  p {
+    @include flexing(
+      $basis: 100%,
+      $justCont: center,
+      $alignItem: center);
+    height: 150px;
+    @include mq('m') {
+      height: 200px;
+    }
+  }
+  @include mq('m') {
+    flex-basis: 100%;
+    padding: 10px;
+    flex-basis: 47%;
+  }
+  @include mq('l') {
+    flex-basis: auto;
+    flex-grow: 1;
+    padding: 0 10px 0 15px;
+  }
+}
+
+.social-stats {
+  @include flexing(
+    $dire: row,
+    $wrap: wrap);
+  padding: 0px 19px 15px 19px;
+  border-bottom: 1px solid grey;
+    h2 {
+      flex-basis: 100%;
+    }
+  @include mq('m') {
+    padding: 10px;
+    justify-content: space-between;
+    flex-basis: 100%;
+  }
+  @include mq('l') {
+    padding: 0 10px 5px;
+  }
+}
+
+.flexing-socials {
+  @include flexing(
+    $basis: 100%);
+  margin: 10px 0;
+  border: 1px solid #c5c5c5;
+  border-radius: 10px;
+  background-color: rgba(173, 169, 169, 0.189);
+  color: $primary-color;
+  fill: $primary-color;
+    &-title {
+      margin: .5em auto 0px .3em;
+    }
+    &-numbers {
+      margin: 0px;
+      color: #393939aa;
+    }
+  @include mq('m') {
+    flex-basis: 32%;
+    justify-content: center;
+  }
+  @include mq('l') {
+    margin-top: 0;
+  }
+}
