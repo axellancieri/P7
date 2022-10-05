@@ -10,13 +10,13 @@ function alertPopUp() {
     const closeNotifBar = getDiv.querySelector('span');
     main.insertBefore(getDiv, traffic);
     // making event listener on 'X' span element so it'll close the alertpopu
-    closeNotifBar.style.cursor = 'pointer';
-    closeNotifBar.addEventListener('click', () => {
-        $("#notif-alert").hide();
-    });
+    // closeNotifBar.style.cursor = 'pointer';
+    // closeNotifBar.addEventListener('click', () => {
+    //     $("#notif-alert").hide();
+    // });
     //Using Jquery to give an animation sequence effect
-    // $("#notif-alert")
-    //     .hide()
+    $("#notif-alert")
+        .hide()
     //     .delay(500)
     //     .slideDown(1500)
     //     .delay(5000)
