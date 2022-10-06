@@ -2,8 +2,7 @@
 const traffic = document.querySelector('.traffic');
 const getDiv = document.createElement('div');
 const main = document.querySelector('main');
-// const bellNotif = document.querySelector('.svg-head-bell ellipse');
-
+const bellNotif = document.querySelector('.svg-head-bell');
 
 //Notification alerts
 function alertPopUp() {
@@ -12,8 +11,11 @@ function alertPopUp() {
     main.insertBefore(getDiv, traffic);   
     // making event listener on 'X' span element so it'll close the alertpopu
     const closeNotifBar = getDiv.querySelector('span');
-    closeNotifBar.style.cursor = 'pointer';
     closeNotifBar.addEventListener('click', () => {
+        $("#notif-alert").hide();
+        $(".svg-head-bell ellipse").hide();
+    });
+    bellNotif.addEventListener('click', () => {
         $("#notif-alert").hide();
         $(".svg-head-bell ellipse").hide();
     });
@@ -34,7 +36,5 @@ function notifAlerts() {
         .delay(4000)
         .hide(500);
 }
-//Making alertPop appear on page load
-window.addEventListener('load', () => {
-    alertPopUp();
-});
+
+export { alertPopUp }

@@ -58,6 +58,7 @@ main {
     @include flexing(
       $justCont: flex-end,
       $basis: 10%);
+    cursor: pointer;
     margin-right: 1em;
   }
 }

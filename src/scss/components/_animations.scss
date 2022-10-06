@@ -1,0 +1,25 @@
+/* --------------------------
+  Keyframes
+--------------------------- */
+
+@keyframes grow {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    80% {
+      transform: scale(0.9);
+    }
+  }
+
+.svg-head-bell * {
+transform-origin: center;
+transform-box: fill-box; /* gotta do this (seen on comments) so it behaves as expected on chrome */ 
+}
+
+.fancyMov:hover {
+            cursor: pointer;
+            animation: grow 1s ease backwards;
+}
