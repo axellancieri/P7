@@ -11,7 +11,7 @@
         "aside"
         "footer";
     @include mq('m') {
-            grid-template-columns: 90px minmax(200px, auto);
+            grid-template-columns: 75px minmax(200px, auto);
             grid-auto-rows: minmax(100px, auto) minmax(50px, auto);
             grid-template-areas:
                 "header header"

@@ -11,6 +11,7 @@ main {
 .dashboard {
   @include flexing();
   background-color: white;
+  padding: 0 0 15px 19px;
   .grey-space {
     flex-grow: 1;
     background-color: rgba(224, 223, 223, 0.393);
@@ -19,23 +20,32 @@ main {
   }
   h3 {
     align-self: center;
-    padding: 10px;
+    margin: 1em 19px 1em 0;
   }
   @include mq('m') {
     height: 8%;
     flex-basis: 100%;
+    padding: 0 0 15px 10px;
+    h3 {
+      margin: auto;
+      padding: 0 15px 0 5px;
+    }
   }
   @include mq('l') {
     height: 7.5%;
+    padding: 0 0 20px 10px;
+    h3 {
+      padding: 0 20px 0 10px;
+    }
   }
 }
-    
+
 #notif-alert {
   @include flexing(
     $justCont: space-between,
     $alignItem: center,
     $basis: 100%);
-  background-color: green;
+  background-color: $primary-color;
   margin: 1em;
   border-radius: 10px;
   color: white;
@@ -61,7 +71,7 @@ main {
   h2 {
     flex-basis: 100%;
     @include mq('m') {
-      flex-basis: 40%;
+      flex-basis: 48%;
     }
     @include mq('l') {
       margin-right: auto;

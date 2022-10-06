@@ -38,7 +38,12 @@ aside h2 {
 }
 
 h3 {
-  margin: 14px;
+  margin: 8px;
+}
+@media (min-width: 768px) {
+  h3 {
+    margin: 11px;
+  }
 }
 
 fieldset {
@@ -91,7 +96,7 @@ h2 {
 }
 @media (min-width: 768px) {
   h2 {
-    font-size: 0.9em;
+    font-size: 1em;
   }
 }
 
@@ -100,7 +105,12 @@ h3 {
 }
 @media (min-width: 768px) {
   h3 {
-    font-size: 1.3em;
+    font-size: 1.2em;
+  }
+}
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 1.1em;
   }
 }
 
@@ -384,7 +394,7 @@ option {
 }
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: 90px minmax(200px, auto);
+    grid-template-columns: 75px minmax(200px, auto);
     grid-auto-rows: minmax(100px, auto) minmax(50px, auto);
     grid-template-areas: "header header" "nav main" "nav aside" "nav footer";
   }
@@ -424,6 +434,7 @@ header p {
 .dashboard {
   display: flex;
   background-color: white;
+  padding: 0 0 15px 19px;
 }
 .dashboard .grey-space {
   flex-grow: 1;
@@ -433,17 +444,26 @@ header p {
 }
 .dashboard h3 {
   align-self: center;
-  padding: 10px;
+  margin: 1em 19px 1em 0;
 }
 @media (min-width: 768px) {
   .dashboard {
     height: 8%;
     flex-basis: 100%;
+    padding: 0 0 15px 10px;
+  }
+  .dashboard h3 {
+    margin: auto;
+    padding: 0 15px 0 5px;
   }
 }
 @media (min-width: 1024px) {
   .dashboard {
     height: 7.5%;
+    padding: 0 0 20px 10px;
+  }
+  .dashboard h3 {
+    padding: 0 20px 0 10px;
   }
 }
 
@@ -452,7 +472,7 @@ header p {
   flex-basis: 100%;
   justify-content: space-between;
   align-items: center;
-  background-color: green;
+  background-color: rgba(76, 71, 175, 0.776);
   margin: 1em;
   border-radius: 10px;
   color: white;
@@ -481,7 +501,7 @@ header p {
 }
 @media (min-width: 768px) {
   .traffic h2 {
-    flex-basis: 40%;
+    flex-basis: 48%;
   }
 }
 @media (min-width: 1024px) {
@@ -992,20 +1012,34 @@ nav {
 .svg-head-bell {
   display: flex;
   flex-basis: 7%;
-  margin: auto;
+  margin: auto 8px 5px auto;
+}
+.svg-head-bell svg {
+  width: 1.9em;
+}
+.svg-head-bell path {
   fill: white;
+}
+.svg-head-bell ellipse {
+  fill: rgb(16, 189, 16);
 }
 @media (min-width: 768px) {
   .svg-head-bell {
-    margin: 0 20px 10px;
+    margin: 0 15px 10px;
     align-self: flex-end;
     flex-basis: 5%;
+  }
+  .svg-head-bell svg {
+    width: 3.2em;
   }
 }
 @media (min-width: 1024px) {
   .svg-head-bell {
-    margin-bottom: 7px;
+    margin: auto 10px 5px 0;
     flex-basis: 2.1%;
+  }
+  .svg-head-bell svg {
+    width: 2.3em;
   }
 }
 
@@ -1037,6 +1071,7 @@ nav {
 @media (min-width: 768px) {
   .header-image {
     flex-basis: 84%;
+    width: 50%;
   }
 }
 @media (min-width: 1024px) {

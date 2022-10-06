@@ -16,14 +16,17 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
     @include mq('m') {
-        font-size: .9em;
+        font-size: 1em;
     }
 }
 
 h3 {
     font: bold 1em "Open Sans", sans-serif;
     @include mq('m') {
-        font-size: 1.3em;
+        font-size: 1.2em;
+    }
+    @include mq('l') {
+        font-size: 1.1em;
     }
 }
 

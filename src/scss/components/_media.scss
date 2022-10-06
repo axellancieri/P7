@@ -13,16 +13,30 @@
 .svg-head-bell {
   @include flexing(
     $basis: 7%);
-  margin: auto;
-  fill: white;
+  margin: auto 8px 5px auto;;
+  svg {
+    width:1.9em;
+  }
+  path {
+    fill: white;
+  }
+  ellipse {
+    fill: rgb(16, 189, 16);
+  }
   @include mq('m') {
-    margin: 0 20px 10px;
+    margin: 0 15px 10px;
     align-self: flex-end;
     flex-basis: 5%;
+    svg {
+      width:3.2em;
+    }
   }
   @include mq('l') {
-    margin-bottom: 7px;
+    margin: auto 10px 5px 0;
     flex-basis: 2.1%;
+    svg {
+      width:2.3em;
+    }
   }
 }
   
@@ -48,6 +62,7 @@
   border-radius: 50%;
   @include mq('m') {
     flex-basis: 84%;
+    width: 50%;
   }
   @include mq('l') {
     flex-basis: 50%;
