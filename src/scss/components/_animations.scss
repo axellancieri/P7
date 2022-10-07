@@ -3,14 +3,12 @@
 --------------------------- */
 
 @keyframes grow {
-    0% {
-      transform: scale(1);
+    30% {
+      stroke: #FFFF00;
+      transform: scale(1.5) rotate(15deg);
     }
-    50% {
-      transform: scale(1.5);
-    }
-    80% {
-      transform: scale(0.9);
+    60% {
+      transform: scale(0.5) rotate(-15deg);
     }
   }
 
@@ -20,6 +18,6 @@ transform-box: fill-box; /* gotta do this (seen on comments) so it behaves as ex
 }
 
 .fancyMov:hover {
-            cursor: pointer;
-            animation: grow 1s ease backwards;
+  cursor: pointer;
+  animation: grow 1s ease-out backwards;
 }

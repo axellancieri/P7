@@ -14,8 +14,6 @@
   @include flexing(
     $basis: 7%);
   margin: auto 8px 5px auto;;
-  cursor: pointer;
-  pointer-events: bounding-box;
   svg {
     width:1.9em;
   }
@@ -24,6 +22,7 @@
   }
   ellipse {
     fill: rgb(16, 189, 16);
+    display:block;
   }
   @include mq('m') {
     margin: 0 15px 10px;
@@ -75,7 +74,9 @@
 .svg-nav-icons {
   width: 11%;
   margin: 9px 14px 5px;
-  fill: white;
+  & > a {
+    fill: white;
+  }
   @include mq('m') {
     width: 52%;
     margin: 25px 0 0;
