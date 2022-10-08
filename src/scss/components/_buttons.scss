@@ -57,7 +57,15 @@
     padding: 0;
     border: none;
     background-color: white;
-    &:hover, &:focus {
+    outline: none;
+    &:hover {
+        background-color: #46bc466e;
+        color: white;
+        border-radius: 20px;
+    }
+    &:focus,
+    &:active,
+    &:target {
         background-color: #46bc46;
         color: white;
         border-radius: 20px;
@@ -65,7 +73,6 @@
     @include mq('m') {
         flex-grow: 1;
         flex-basis: 0;
-        // margin: 5px;
         padding: 10px;
     }
     @include mq('l') {
@@ -80,6 +87,7 @@
 
 .checkbox {
     -webkit-appearance: none;
+    appearance: none;
     position: relative;
     width: 74px;
     height: 34px;

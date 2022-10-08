@@ -3,6 +3,7 @@ const traffic = document.querySelector('.traffic');
 const getDiv = document.createElement('div');
 const main = document.querySelector('main');
 const bellNotif = document.querySelector('.svg-head-bell');
+const activeButton = document.querySelector('#activeStart').focus();
 
 //Notification alerts
 function alertPopUp() {
@@ -20,7 +21,9 @@ function alertPopUp() {
         $(".svg-head-bell ellipse").hide();
     });
     notifAlerts()
+    activeButton
 }
+
 // Alerts function
 function notifAlerts() {
     $("#notif-alert")
@@ -38,3 +41,4 @@ function notifAlerts() {
 }
 
 export { alertPopUp }
+
