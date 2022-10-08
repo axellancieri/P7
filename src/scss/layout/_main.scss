@@ -71,7 +71,8 @@ main {
 .traffic {
   @include flexing(
     $dire: row,
-    $wrap: wrap);
+    $wrap: wrap,
+    $justCont: center);
   padding: 0px 19px 15px 19px;
   border-bottom: 1px solid #80808070;
   h2 {
