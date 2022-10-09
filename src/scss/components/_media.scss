@@ -84,10 +84,14 @@
 }
 
 .svg-social-icons {
-  margin: 12px;
-  @include flexing($basis: 20%) {
-    order: -1;
-  };
+  @include flexing(
+    $basis: 12%) {
+    order: -1};
+    margin: auto 0 auto 5vw;
+    padding: 13px;
+    background-color: rgba(76, 71, 175, 0.776);
+    border-radius: 50%;
+  
 }
 
 .traffic-graphic {

@@ -9,7 +9,9 @@
         border-radius: 20px;
         background: white;
         padding-top: 10px;
-        // margin-bottom: 50px;
+        &-donut {
+            padding-bottom: 10px;
+        }
         @include mq('chart') {
             height: 50vh;
         }
