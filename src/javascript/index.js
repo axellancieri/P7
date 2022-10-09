@@ -1,8 +1,8 @@
-import { alertPopUp } from './funcs'
+import { alertPopUp } from './alertLoad'
 import '../scss/style.scss'
-import './charts'
+import './charts/charts'
 
-//Making alertPop appear on page loa    d
+//Making alertPop appear on page load
 window.addEventListener('load', () => {
     alertPopUp();
 });
