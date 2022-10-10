@@ -1,44 +1,7 @@
-//Variables
-const traffic = document.querySelector('.traffic');
-const getDiv = document.createElement('div');
-const getSec = document.createElement('section');
-const main = document.querySelector('main');
-const bellNotif = document.querySelector('.svg-head-bell');
-const activeButton = document.querySelector('#activeStart').focus();
-
-//Notification alerts
-function alertPopUp() {
-    // Alerts function
-const notifAlerts = function () {
-    $("#notif-alert")
-        .hide()
-        .delay(500)
-        .slideDown(500)
-        .delay(4000)
-        .slideUp(500);
-    $(".svg-head-bell ellipse")
-        .hide()
-        .delay(500)
-        .show(500)
-        .delay(4000)
-        .hide(500);
-}
-    getDiv.innerHTML = `<p><strong>Alert:</strong> &nbsp You have unread messages</p><span>X</span>`;
-    getDiv.setAttribute('id', 'notif-alert');
-    main.insertBefore(getDiv, traffic);   
-    // making event listener on 'X' span element so it'll close the alertpopu
-    const closeNotifBar = getDiv.querySelector('span');
-    closeNotifBar.addEventListener('click', () => {
-        $("#notif-alert").hide();
-        $(".svg-head-bell ellipse").hide();
-    });
-    bellNotif.addEventListener('click', () => {
-        $("#notif-alert").hide();
-        $(".svg-head-bell ellipse").hide();
-    });
-    notifAlerts()
-    activeButton
-}
+import {pickUrValue,
+        main,
+        getSec
+        } from './../index'
 
 function socialStats() {
     const socialStatsData = [
@@ -62,24 +25,17 @@ function socialStats() {
                  </svg>`  
         }
     ];
-    function socStats(obj, num, suki) {
-        
-        for ( let i = 0; i < obj.length; i++ ) {
-            let kaka = obj[num][suki];
-            return kaka;
-        }
-        
-    }
-    const socStatsCards = function(num) {
+
+    function socStatsCards(num) {
         let times = ``;
         for ( let i = 0; i < num; i++ ) {
             times += `<div class="flexing-socials">
             <div class="flexing-socials-rightSpace">
-                <h3 class="flexing-socials-title">${socStats(socialStatsData, [i], 'name')}</h3>
-                <h3 class="flexing-socials-numbers">${socStats(socialStatsData, [i], 'numbers')}</h3>
+                <h3 class="flexing-socials-title">${pickUrValue(socialStatsData, [i], 'name')}</h3>
+                <h3 class="flexing-socials-numbers">${pickUrValue(socialStatsData, [i], 'numbers')}</h3>
             </div>
             <div class="svg-social-icons">
-                ${socStats(socialStatsData, [i], 'image')}
+                ${pickUrValue(socialStatsData, [i], 'image')}
             </div>
         </div>`;
         }
@@ -91,5 +47,4 @@ function socialStats() {
     main.appendChild(getSec);
 }
 
-export { alertPopUp }
 export { socialStats }
