@@ -1,6 +1,6 @@
 import {pickUrValue,
         main,
-        getSec
+        getSecSocial
         } from './../index'
 
 function socialStats() {
@@ -41,10 +41,10 @@ function socialStats() {
         }
         return times;
     }
-    getSec.classList.add('social-stats');
-    getSec.innerHTML = `<h2>Social Stats</h2>`;
-    getSec.insertAdjacentHTML('beforeEnd', socStatsCards(3));
-    main.appendChild(getSec);
+    getSecSocial.classList.add('social-stats');
+    getSecSocial.innerHTML = `<h2>Social Stats</h2>`;
+    getSecSocial.insertAdjacentHTML('beforeEnd', socStatsCards(3));
+    main.appendChild(getSecSocial);
 }
 
 export { socialStats }

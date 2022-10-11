@@ -1,5 +1,6 @@
 import { alertPopUp } from './notif/alertLoad'
 import { socialStats } from './layout/socialStats'
+import { newMembers } from './layout/newMemb'
 import '../scss/style.scss'
 import './charts/charts'
 
@@ -16,19 +17,23 @@ function pickUrValue(obj, num, value) {
 // Global vars
 
 const main = document.querySelector('main');
-const getSec = document.createElement('section');
+const aside = document.querySelector('aside');
+const getAside = document.createElement('aside');
+const getSecSocial = document.createElement('section');
+const getSecMem = document.createElement('section');
 const getDiv = document.createElement('div');
 
 //Making alertPop appear on page load
 window.addEventListener('load', () => {
     alertPopUp();
     socialStats();
+    newMembers();    
 });
-
-
 
 export { pickUrValue,
          main,
-         getSec,
-         getDiv
+         aside,
+         getSecSocial,
+         getDiv,
+         getSecMem
 }
