@@ -1,8 +1,7 @@
-import {main,
-        getDiv
-        } from './../index'
+import { main } from './../index'
 
 //Local Variables
+const getDiv = document.createElement('div');
 const traffic = document.querySelector('.traffic');
 const bellNotif = document.querySelector('.svg-head-bell');
 const activeButton = document.querySelector('#activeStart').focus();

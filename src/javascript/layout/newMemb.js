@@ -1,9 +1,10 @@
 import {pickUrValue,
-    main,
-    getAside,
-    getSecMem
-    } from './../index'
+        main,
+        aside
+        } from './../index'
 
+//local variables
+const sectMemb = document.createElement('SECTION');
 
 
 function newMembers() {
@@ -54,17 +55,13 @@ function newMembers() {
         }
         return times;
     }
-    getAside.classList.add('members');
-    getAside.setAttribute('id', 'ppl')
-    main.insertAdjacentElement('afterend', getAside)
-
-    getSecMem.classList.add('new-members')
-    getSecMem.innerHTML = '<h2>New Members</h2>'
-    getAside.insertAdjacentElement('beforeEnd', getSecMem)
-    getSecMem.insertAdjacentHTML('beforeEnd', newMembCards(4)) 
+    sectMemb.classList.add('new-members')
+    sectMemb.innerHTML = '<h2>New Members</h2>'
+    aside.insertAdjacentElement('beforeEnd', sectMemb)
+    sectMemb.insertAdjacentHTML('beforeEnd', newMembCards(4)) 
 
     // taking borderoff first image on New Members section
-    const noBorderMemb = getAside.querySelectorAll('.new-members > .flexing-members');
+    const noBorderMemb = aside.querySelectorAll('.new-members > .flexing-members');
     noBorderMemb[0].setAttribute('id', 'no-border');
 
 }

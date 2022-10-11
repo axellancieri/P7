@@ -17,22 +17,19 @@ function pickUrValue(obj, num, value) {
 // Global vars
 
 const main = document.querySelector('main');
-const getAside = document.createElement('ASIDE');
-const getSecSocial = document.createElement('SECTION');
-const getSecMem = document.createElement('SECTION');
-const getDiv = document.createElement('div');
+const aside = document.createElement('ASIDE');
 
 //Making alertPop appear on page load
 window.addEventListener('load', () => {
     alertPopUp();
     socialStats();
+    aside.classList.add('members');
+    aside.setAttribute('id', 'ppl')
+    main.insertAdjacentElement('afterend', aside)
     newMembers();    
 });
 
 export { pickUrValue,
          main,
-         getAside,
-         getSecSocial,
-         getDiv,
-         getSecMem
+         aside
 }

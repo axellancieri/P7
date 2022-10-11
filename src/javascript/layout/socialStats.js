@@ -1,7 +1,9 @@
 import {pickUrValue,
-        main,
-        getSecSocial
+        main
         } from './../index'
+
+//local variables
+const getSecSocial = document.createElement('SECTION');
 
 function socialStats() {
     const socialStatsData = [
