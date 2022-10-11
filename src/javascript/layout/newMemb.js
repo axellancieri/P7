@@ -1,7 +1,6 @@
 import {pickUrValue,
     main,
     getAside,
-    aside,
     getSecMem
     } from './../index'
 
@@ -14,25 +13,26 @@ function newMembers() {
                 name: 'Victoria Chambers',
                 email: 'victoria.chambers80@example.com',
                 bdate: '10/15/20',
-                image: 'images/member-1.jpg'
+                image: require('../../images/member-1.jpg')
+                
             },
             {
                 name: 'Dale Byrd',
                 email: 'dale.byrd52@example.com',
                 bdate: '10/15/20',
-                image: 'images/member-2.jpg'
+                image: require('../../images/member-2.jpg')
             },
             {
                 name: 'Dawn Good',
                 email: 'dawn.wood16@example.com',
                 bdate: '10/15/20',
-                image: 'images/member-3.jpg'
+                image: require('../../images/member-3.jpg')
             },
             {
                 name: 'Dan Oliver',
                 email: 'dan.oliver82@example.com',
                 bdate: '10/15/20',
-                image: 'images/member-4.jpg'
+                image: require('../../images/member-4.jpg')
             }
         ]
     // id="no-border"
@@ -42,7 +42,7 @@ function newMembers() {
             times += `
                         <div class="flexing-members">                        
                             <div>
-                                <img src="images/member-1.jpg" class="new-members-images" alt="image of ${pickUrValue(pplData, [i], 'name')}">
+                                <img src="${pickUrValue(pplData, [i], 'image')}" class="new-members-images" alt="image of ${pickUrValue(pplData, [i], 'name')}">
                             </div>
                             <div class="aside-text">
                                 <p>${pickUrValue(pplData, [i], 'name')}</p>
@@ -54,14 +54,19 @@ function newMembers() {
         }
         return times;
     }
-    // getAside
-    // main.insertAdjacentHTML('afterEnd', getAside)
-    // aside.classList.add('members');
-    // aside.setAttribute('id', 'ppl')
+    getAside.classList.add('members');
+    getAside.setAttribute('id', 'ppl')
+    main.insertAdjacentElement('afterend', getAside)
 
     getSecMem.classList.add('new-members')
     getSecMem.innerHTML = '<h2>New Members</h2>'
-    aside.insertAdjacentHTML('beforeEnd', newMembCards(4)) 
+    getAside.insertAdjacentElement('beforeEnd', getSecMem)
+    getSecMem.insertAdjacentHTML('beforeEnd', newMembCards(4)) 
+
+    // taking borderoff first image on New Members section
+    const noBorderMemb = getAside.querySelectorAll('.new-members > .flexing-members');
+    noBorderMemb[0].setAttribute('id', 'no-border');
+
 }
 
 export { newMembers }

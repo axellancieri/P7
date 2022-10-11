@@ -1,4 +1,4 @@
-import { alertPopUp } from './notif/alertLoad'
+import { alertPopUp } from './interact/alertLoad'
 import { socialStats } from './layout/socialStats'
 import { newMembers } from './layout/newMemb'
 import '../scss/style.scss'
@@ -17,10 +17,9 @@ function pickUrValue(obj, num, value) {
 // Global vars
 
 const main = document.querySelector('main');
-const aside = document.querySelector('aside');
-const getAside = document.createElement('aside');
-const getSecSocial = document.createElement('section');
-const getSecMem = document.createElement('section');
+const getAside = document.createElement('ASIDE');
+const getSecSocial = document.createElement('SECTION');
+const getSecMem = document.createElement('SECTION');
 const getDiv = document.createElement('div');
 
 //Making alertPop appear on page load
@@ -32,7 +31,7 @@ window.addEventListener('load', () => {
 
 export { pickUrValue,
          main,
-         aside,
+         getAside,
          getSecSocial,
          getDiv,
          getSecMem
