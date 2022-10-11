@@ -42,7 +42,7 @@ function newMembers() {
             times += `
                         <div class="flexing-members">                        
                             <div>
-                                <img src="images/member-1.jpg" class="new-members-images" alt="image of Victoria">
+                                <img src="images/member-1.jpg" class="new-members-images" alt="image of ${pickUrValue(pplData, [i], 'name')}">
                             </div>
                             <div class="aside-text">
                                 <p>${pickUrValue(pplData, [i], 'name')}</p>
