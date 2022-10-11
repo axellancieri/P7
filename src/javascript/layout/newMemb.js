@@ -1,42 +1,39 @@
 import {pickUrValue,
-        main,
         aside
         } from './../index'
 
 //local variables
 const sectMemb = document.createElement('SECTION');
-
+const pplData = [
+    {
+        name: 'Victoria Chambers',
+        email: 'victoria.chambers80@example.com',
+        bdate: '10/15/20',
+        image: require('../../images/member-1.jpg')
+        
+    },
+    {
+        name: 'Dale Byrd',
+        email: 'dale.byrd52@example.com',
+        bdate: '10/15/20',
+        image: require('../../images/member-2.jpg')
+    },
+    {
+        name: 'Dawn Good',
+        email: 'dawn.wood16@example.com',
+        bdate: '10/15/20',
+        image: require('../../images/member-3.jpg')
+    },
+    {
+        name: 'Dan Oliver',
+        email: 'dan.oliver82@example.com',
+        bdate: '10/15/20',
+        image: require('../../images/member-4.jpg')
+    }
+]
 
 function newMembers() {
 
-        const pplData = [
-            {
-                name: 'Victoria Chambers',
-                email: 'victoria.chambers80@example.com',
-                bdate: '10/15/20',
-                image: require('../../images/member-1.jpg')
-                
-            },
-            {
-                name: 'Dale Byrd',
-                email: 'dale.byrd52@example.com',
-                bdate: '10/15/20',
-                image: require('../../images/member-2.jpg')
-            },
-            {
-                name: 'Dawn Good',
-                email: 'dawn.wood16@example.com',
-                bdate: '10/15/20',
-                image: require('../../images/member-3.jpg')
-            },
-            {
-                name: 'Dan Oliver',
-                email: 'dan.oliver82@example.com',
-                bdate: '10/15/20',
-                image: require('../../images/member-4.jpg')
-            }
-        ]
-    // id="no-border"
     function newMembCards(num) {
         let times = ``;
         for ( let i = 0; i < num; i++ ) {
@@ -60,10 +57,11 @@ function newMembers() {
     aside.insertAdjacentElement('beforeEnd', sectMemb)
     sectMemb.insertAdjacentHTML('beforeEnd', newMembCards(4)) 
 
-    // taking borderoff first image on New Members section
+    //MIGHT WANNA DO THIS ON INDEX / GLOBAL taking borderoff first image on New Members section
     const noBorderMemb = aside.querySelectorAll('.new-members > .flexing-members');
     noBorderMemb[0].setAttribute('id', 'no-border');
 
 }
 
-export { newMembers }
+export { newMembers,
+         pplData }

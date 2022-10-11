@@ -1,6 +1,7 @@
 import { alertPopUp } from './interact/alertLoad'
 import { socialStats } from './layout/socialStats'
 import { newMembers } from './layout/newMemb'
+import { recentMembers } from './layout/recentMembe'
 import '../scss/style.scss'
 import './charts/charts'
 
@@ -23,10 +24,15 @@ const aside = document.createElement('ASIDE');
 window.addEventListener('load', () => {
     alertPopUp();
     socialStats();
-    aside.classList.add('members');
-    aside.setAttribute('id', 'ppl')
-    main.insertAdjacentElement('afterend', aside)
-    newMembers();    
+    // Getting Aside created
+        aside.classList.add('members');
+        aside.setAttribute('id', 'ppl')
+        main.insertAdjacentElement('afterend', aside)
+    newMembers(); 
+    recentMembers();   
+    //taking borderoff first image on each aside sections
+        const noBorderMemb = aside.querySelectorAll('.new-members > .flexing-members');
+        noBorderMemb[0,4].setAttribute('id', 'no-border');
 });
 
 export { pickUrValue,
