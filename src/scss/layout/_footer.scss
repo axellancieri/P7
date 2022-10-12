@@ -1,5 +1,3 @@
-@use 'abstracts' as *;
-
 .messageUser-settings {
   @include mq('l') {
     @include flexing(

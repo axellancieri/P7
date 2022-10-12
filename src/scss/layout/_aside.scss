@@ -1,5 +1,3 @@
-@use 'abstracts' as *;
-
 .members {
     @include mq('l') {
         @include flexing(

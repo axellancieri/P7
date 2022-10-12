@@ -1,5 +1,3 @@
-@use 'abstracts' as *;
-
 nav {
   @include flexing(
     $wrap: wrap,

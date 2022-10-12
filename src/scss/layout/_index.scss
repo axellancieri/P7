@@ -1,6 +1,6 @@
-@forward 'footer';
-@forward 'grid';
-@forward 'header';
-@forward 'main';
-@forward 'navigation';
-@forward 'aside';
+@import 'footer',
+        'grid',
+        'header',
+        'main',
+        'navigation',
+        'aside';

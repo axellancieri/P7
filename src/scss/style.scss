@@ -1,4 +1,4 @@
-@forward 'abstracts';
-@forward 'base';
-@forward 'layout';
-@forward 'components';
+@import 'abstracts/index',
+        'base/index',
+        'components/index',
+        'layout/index';
