@@ -1,6 +1,6 @@
 //LAYOUT SECTION
 
-    // Global func
+    // Global functions
 
     function pickUrValue(obj, num, value) {
             
