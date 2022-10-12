@@ -40,7 +40,3 @@ export { pickUrValue,
          main,
          aside
 }
-
-module.exports = {
-    "minifySvg": false
-  }
