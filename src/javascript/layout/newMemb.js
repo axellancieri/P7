@@ -57,10 +57,6 @@ function newMembers() {
     aside.insertAdjacentElement('beforeEnd', sectMemb)
     sectMemb.insertAdjacentHTML('beforeEnd', newMembCards(4)) 
 
-    //MIGHT WANNA DO THIS ON INDEX / GLOBAL taking borderoff first image on New Members section
-    const noBorderMemb = aside.querySelectorAll('.new-members > .flexing-members');
-    noBorderMemb[0].setAttribute('id', 'no-border');
-
 }
 
 export { newMembers,

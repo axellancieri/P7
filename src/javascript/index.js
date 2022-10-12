@@ -32,10 +32,15 @@ window.addEventListener('load', () => {
     recentMembers();   
     //taking borderoff first image on each aside sections
         const noBorderMemb = aside.querySelectorAll('.new-members > .flexing-members');
-        noBorderMemb[0,4].setAttribute('id', 'no-border');
+        noBorderMemb[0].setAttribute('id', 'no-border');
+        noBorderMemb[4].setAttribute('id', 'no-border');
 });
 
 export { pickUrValue,
          main,
          aside
 }
+
+module.exports = {
+    "minifySvg": false
+  }
