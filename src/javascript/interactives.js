@@ -94,13 +94,7 @@
 
     //message user button interactions
 
-        function buttonMessage() {
-            const button = messageForm.querySelector('button');
-            const searchCheck = messageForm.querySelector('search');
-            const txtAreaCheck = messageForm.querySelector('text_user');
-            
-            button.disabled = 'true';
-        }
+
 //CALLING ALL INTERACTIVE FUNCS
 
     window.addEventListener('load', () => {

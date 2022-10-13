@@ -172,6 +172,34 @@
 
         } 
 
+
+        function buttonMessage() {
+            const button = messageForm.querySelector('button');
+            const searchCheck = messageForm.querySelector('.message-search');
+            const txtAreaCheck = messageForm.querySelector('.textarea');
+            const alertMessageDiv = document.createElement('div');
+            // alertMessageDiv.innerHTML = `<p>LOL</p>`;
+            button.insertAdjacentElement('beforebegin', alertMessageDiv);
+
+            // making this event so it wont reload page
+            button.addEventListener('click', (e) => {
+                e.preventDefault()
+            })
+            // button.disabled = 'true';
+            button.addEventListener('mousedown', () => {
+                for ( i = 0; i < pplData.length; i++ ) {
+                    if (searchCheck.value.includes(pickUrValue(pplData, [i], 'name')) && !!txtAreaCheck.value && txtAreaCheck.value.length === txtAreaCheck.value.trim().length) {
+                        
+                        alertMessageDiv.innerHTML = `<p>Message Sent! you'll receive a copy on your inbox</p>`
+                        break
+                    } else {
+                        alertMessageDiv.innerHTML = `<p>ERROR<br><span>Click here</span> to get more details</p>`
+                    }   
+                }
+            })            
+        }
+
+
 //CALLING ALL LAYOUT FUNCS
 
     window.addEventListener('load', () => {
