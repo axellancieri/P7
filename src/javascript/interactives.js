@@ -2,7 +2,6 @@
 
 
     //Notif Alert Variables
-    const main = document.querySelector('main');
     const getDiv = document.createElement('div');
     const traffic = document.querySelector('.traffic');
     const bellNotif = document.querySelector('.svg-head-bell');

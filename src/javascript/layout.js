@@ -174,8 +174,35 @@
 
 //Message User interactivity
     //searchBar
-    const searchBar = document.querySelector('#searchUser');
-    
+    const searchBar = document.querySelector('#searchUser');  
+
+    function searcher() {
+            searchBar.value = searchBar.value.toLowerCase()
+            searchLowCase = searchBar.value
+            
+        for ( let i = 0; i < pplData.length; i++ ) {    
+            if (!pickUrValue(pplData, [i], 'name').toLowerCase().includes(searchLowCase)) {
+                searchBar.childs().style.display = 'none';
+            } else {
+                searchBar.childs().style.display = 'flex';
+            }
+        }
+    }
+    searchBar.addEventListener('focusin', () => {
+        for ( let i = 0; i < pplData.length; i++ ) {   
+            const slideNames = document.createElement('Div'); 
+            slideNames.innerHTML = `<p>${pickUrValue(pplData, [i], 'name')}</p>`
+            slideNames.style.display = 'none';
+            searchBar.insertAdjacentElement('afterend', slideNames);
+        }
+        // searchBar.addEventListener('focusout', () => {
+
+        // })
+    });
+    // searchBar.addEventListener('focusout', () => {
+    //         slideNames.style.display = 'none';
+    //     });
+    searchBar.addEventListener('keyup', searcher);
 
 //CALLING ALL LAYOUT FUNCS
 
