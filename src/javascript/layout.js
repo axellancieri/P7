@@ -170,44 +170,7 @@
             aside.insertAdjacentElement('beforeEnd', sectRec)
             sectRec.insertAdjacentHTML('beforeEnd', recMemCards(4)) 
 
-        }
-
-//Message User interactivity
-    //searchBar
-    const searchBar = document.querySelector('#searchUser'); 
-    const footer = document.querySelector('footer'); 
-
-    searchBar.addEventListener('focusin', () => {
-        for ( let i = 0; i < pplData.length; i++ ) {   
-            const slideNames = document.createElement('Div'); 
-            slideNames.innerHTML = `<p>${pickUrValue(pplData, [i], 'name')}</p>`;
-            slideNames.classList.add('papaya');
-            slideNames.style.display = 'none';
-            searchBar.insertAdjacentElement('afterend', slideNames);
-        
-            searchBar.addEventListener('focusout', () => {
-                slideNames.remove()
-            
-        })
-
-        searchBar.addEventListener('keyup', () => {
-            searchBar.value = searchBar.value.toLowerCase()
-            searchLowCase = searchBar.value   
-                if (!slideNames.innerHTML.toLowerCase().includes(searchLowCase)) {
-                    slideNames.style.display = 'none';
-                } else if (searchLowCase.length === 0) {
-                    slideNames.style.display = 'none';
-                } else {
-                    slideNames.style.display = 'flex';
-                }
-        })
-
-        slideNames.addEventListener('mousedown', () => {
-            console.log(`clicked on ${pickUrValue(pplData, [i], 'name')}`)
-        })
-
-        }
-    });
+        } 
 
 //CALLING ALL LAYOUT FUNCS
 
