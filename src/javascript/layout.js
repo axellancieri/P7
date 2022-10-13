@@ -174,35 +174,40 @@
 
 //Message User interactivity
     //searchBar
-    const searchBar = document.querySelector('#searchUser');  
+    const searchBar = document.querySelector('#searchUser'); 
+    const footer = document.querySelector('footer'); 
 
-    function searcher() {
-            searchBar.value = searchBar.value.toLowerCase()
-            searchLowCase = searchBar.value
-            
-        for ( let i = 0; i < pplData.length; i++ ) {    
-            if (!pickUrValue(pplData, [i], 'name').toLowerCase().includes(searchLowCase)) {
-                searchBar.childs().style.display = 'none';
-            } else {
-                searchBar.childs().style.display = 'flex';
-            }
-        }
-    }
     searchBar.addEventListener('focusin', () => {
         for ( let i = 0; i < pplData.length; i++ ) {   
             const slideNames = document.createElement('Div'); 
-            slideNames.innerHTML = `<p>${pickUrValue(pplData, [i], 'name')}</p>`
+            slideNames.innerHTML = `<p>${pickUrValue(pplData, [i], 'name')}</p>`;
+            slideNames.classList.add('papaya');
             slideNames.style.display = 'none';
             searchBar.insertAdjacentElement('afterend', slideNames);
-        }
-        // searchBar.addEventListener('focusout', () => {
+        
+            searchBar.addEventListener('focusout', () => {
+                slideNames.remove()
+            
+        })
 
-        // })
+        searchBar.addEventListener('keyup', () => {
+            searchBar.value = searchBar.value.toLowerCase()
+            searchLowCase = searchBar.value   
+                if (!slideNames.innerHTML.toLowerCase().includes(searchLowCase)) {
+                    slideNames.style.display = 'none';
+                } else if (searchLowCase.length === 0) {
+                    slideNames.style.display = 'none';
+                } else {
+                    slideNames.style.display = 'flex';
+                }
+        })
+
+        slideNames.addEventListener('mousedown', () => {
+            console.log(`clicked on ${pickUrValue(pplData, [i], 'name')}`)
+        })
+
+        }
     });
-    // searchBar.addEventListener('focusout', () => {
-    //         slideNames.style.display = 'none';
-    //     });
-    searchBar.addEventListener('keyup', searcher);
 
 //CALLING ALL LAYOUT FUNCS
 
