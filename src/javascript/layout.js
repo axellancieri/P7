@@ -172,46 +172,6 @@
 
         } 
 
-
-        function buttonMessage() {
-            const button = messageForm.querySelector('button');
-            const searchCheck = messageForm.querySelector('.message-search');
-            const txtAreaCheck = messageForm.querySelector('.textarea');
-            const alertMessageDiv = document.createElement('div');
-            const errorDetailsDiv = document.createElement('Div');
-            button.insertAdjacentElement('beforebegin', alertMessageDiv);
-
-            // making this event so it wont reload page
-
-            button.addEventListener('click', (e) => {
-                e.preventDefault()
-            })
-
-            /* Making even listener on button and displaying error message if username is not complete or message returns null or has a white space at start and also if its empty */
-
-            button.addEventListener('mousedown', () => {
-                for ( i = 0; i < pplData.length; i++ ) {
-                    if (searchCheck.value.includes(pickUrValue(pplData, [i], 'name')) && !!txtAreaCheck.value && txtAreaCheck.value.length === txtAreaCheck.value.trim().length) {
-                        
-                        alertMessageDiv.innerHTML = `<p>Message Sent! you'll receive a copy on your inbox</p>`
-                        break
-                    } else {
-                        alertMessageDiv.innerHTML = `<p>ERROR <span id="errorMessage">"Read more"</span> to get details</p>`
-                        /*Making an error message dropdown text with more details*/
-                        const errorMessage = alertMessageDiv.querySelector('#errorMessage');
-                        errorDetailsDiv.innerHTML = '<p>Check for empty spaces at the beginning of your text and that the name and last name of the person sending the message is correct. <span id="errorDetails">Quit "Read more"</span></p>';
-                        errorMessage.addEventListener('mousedown', () => {
-                            alertMessageDiv.insertAdjacentElement('afterend', errorDetailsDiv)
-                        });  
-                        errorDetailsDiv.addEventListener('click', () => {
-                            errorDetailsDiv.remove()
-                        });
-                    }   
-                }
-            })          
-        }
-
-
 //CALLING ALL LAYOUT FUNCS
 
     window.addEventListener('load', () => {
