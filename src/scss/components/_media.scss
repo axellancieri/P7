@@ -89,10 +89,18 @@
     padding: 17px;
     background-color: rgba(76, 71, 175, 0.776);
     border-radius: 50%;  
+    @include mq('m') {
+    margin: 5px;
+    padding: 15px;
+    flex: 1;
+    }
 }
 
 .svg-social-icons {
     width: 8vh;
+    @include mq('m') {
+      width: 7vh;
+    }
 }
 
 .traffic-graphic {

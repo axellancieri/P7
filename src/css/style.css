@@ -72,7 +72,7 @@ h2 {
 }
 @media (min-width: 768px) {
   h2 {
-    font-size: 1em;
+    font-size: 0.8em;
   }
 }
 
@@ -143,10 +143,19 @@ h3 {
   font: bold 1.1em "Open Sans", sans-serif;
   font-size: 1.3em;
 }
+@media (min-width: 768px) {
+  .flexing-socials-title {
+    font-size: 1em;
+  }
+}
 .flexing-socials-numbers {
-  margin: 0px;
   font-size: 3.2em;
   font-weight: 400;
+}
+@media (min-width: 768px) {
+  .flexing-socials-numbers {
+    font-size: 2.4em;
+  }
 }
 
 #notif-alert {
@@ -428,6 +437,7 @@ header p {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: auto;
   }
 }
@@ -568,8 +578,8 @@ header p {
 }
 @media (min-width: 768px) {
   .daily-traffic {
-    padding: 10px 0px 10px 10px;
-    flex-basis: 47%;
+    padding: 0 10px 10px 10px;
+    flex: 1;
     border-right: 1px solid grey;
   }
 }
@@ -605,9 +615,8 @@ header p {
 }
 @media (min-width: 768px) {
   .mobile-users {
-    flex-basis: 100%;
-    padding: 10px;
-    flex-basis: 47%;
+    padding: 0 10px 10px;
+    flex: 1;
   }
 }
 @media (min-width: 1024px) {
@@ -632,7 +641,7 @@ header p {
   .social-stats {
     padding: 10px;
     justify-content: space-between;
-    flex-basis: 100%;
+    flex: 1;
   }
 }
 @media (min-width: 1024px) {
@@ -655,8 +664,19 @@ header p {
 .flexing-socials-rightSpace {
   margin-right: 10vw;
 }
+@media (min-width: 768px) {
+  .flexing-socials-rightSpace {
+    padding-right: 2vw;
+    margin-right: 0;
+  }
+}
 .flexing-socials-title {
   margin: 0.5em auto 0px 0.3em;
+}
+@media (min-width: 768px) {
+  .flexing-socials-title {
+    margin: 0;
+  }
 }
 .flexing-socials-numbers {
   margin: 0px;
@@ -664,8 +684,9 @@ header p {
 }
 @media (min-width: 768px) {
   .flexing-socials {
-    flex-basis: 32%;
-    justify-content: center;
+    flex-basis: 30%;
+    justify-content: space-between;
+    padding: 17px 3px;
   }
 }
 @media (min-width: 1024px) {
@@ -949,7 +970,7 @@ nav {
   border-radius: 20px;
 }
 .traffic button:focus, .traffic button:active, .traffic button:target {
-  background-color: #46bc46;
+  background-color: rgba(70, 188, 70, 0.6862745098);
   color: white;
   border-radius: 20px;
 }
@@ -1123,9 +1144,21 @@ nav {
   background-color: rgba(76, 71, 175, 0.776);
   border-radius: 50%;
 }
+@media (min-width: 768px) {
+  .social-icons {
+    margin: 5px;
+    padding: 15px;
+    flex: 1;
+  }
+}
 
 .svg-social-icons {
   width: 8vh;
+}
+@media (min-width: 768px) {
+  .svg-social-icons {
+    width: 7vh;
+  }
 }
 
 .traffic-graphic {

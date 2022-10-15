@@ -2,7 +2,8 @@ main {
   @include mq('m') {
     @include flexing(
       $dire: row,
-      $wrap: wrap);
+      $wrap: wrap,
+      $justCont: space-between);
     margin-bottom: auto;
   }
   @include mq('l') {
@@ -123,8 +124,8 @@ main {
     }
   }
   @include mq('m') {
-    padding: 10px 0px 10px 10px;
-    flex-basis: 47%;
+    padding: 0 10px 10px 10px;
+    flex: 1;
     border-right: 1px solid grey;
   }
   @include mq('l') {
@@ -154,9 +155,8 @@ main {
     }
   }
   @include mq('m') {
-    flex-basis: 100%;
-    padding: 10px;
-    flex-basis: 47%;
+    padding: 0 10px 10px;
+    flex: 1;
   }
   @include mq('l') {
     flex-basis: auto;
@@ -177,7 +177,7 @@ main {
   @include mq('m') {
     padding: 10px;
     justify-content: space-between;
-    flex-basis: 100%;
+    flex: 1;
   }
   @include mq('l') {
     padding: 0 10px 5px;
@@ -196,17 +196,25 @@ main {
   fill: white;
   &-rightSpace {
     margin-right: 10vw;
+    @include mq('m') {
+      padding-right: 2vw;
+      margin-right: 0;
+    }
   }
   &-title {
     margin: .5em auto 0px .3em;
+    @include mq('m') {
+      margin: 0;
+    }
   }
   &-numbers {
     margin: 0px;
     color: #393939aa;
   }
   @include mq('m') {
-    flex-basis: 32%;
-    justify-content: center;
+    flex-basis: 30%;
+    justify-content: space-between;
+    padding: 17px 3px;
   }
   @include mq('l') {
     margin-top: 0;

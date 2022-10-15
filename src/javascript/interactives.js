@@ -128,8 +128,8 @@
                 } else {
                     /* Following 2 lines make the animation proc if you change from success message to fail one
                     Learned this at https://css-tricks.com/restart-css-animation/ */
-                    void alertMessageDiv.offsetWidth;
                     alertMessageDiv.classList.remove("textarea-errormsg-animation");
+                    void alertMessageDiv.offsetWidth;
                     
                     alertMessageDiv.style.backgroundColor = 'rgba(225, 34, 34, 0.5607843137)';
                     alertMessageDiv.classList.add('textarea-errormsg-animation');

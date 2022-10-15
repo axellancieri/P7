@@ -14,7 +14,7 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 1px;
     @include mq('m') {
-        font-size: 1em;
+        font-size: .8em;
     }
 }
 
@@ -77,11 +77,16 @@ h3 {
     &-title {
         font: bold 1.1em "Open Sans", sans-serif;
         font-size: 1.3em;
+        @include mq('m') {
+            font-size: 1em;
+        }
     }
     &-numbers {
-        margin: 0px;
         font-size: 3.2em;
         font-weight: 400;
+        @include mq('m') {
+            font-size: 2.4em;
+        }
     }
 }
 
