@@ -193,6 +193,10 @@ select:required:invalid {
   font-size: 100%;
 }
 
+.checkboxes p {
+  font-size: 0.9em;
+}
+
 @media (min-width: 1024px) {
   .messageUser-settings {
     display: flex;
@@ -327,24 +331,6 @@ select:required:invalid {
   padding: 0 19px;
   margin-bottom: 10px;
 }
-.settings label {
-  flex-basis: 70%;
-}
-@media (min-width: 768px) {
-  .settings label {
-    flex-basis: 35%;
-  }
-}
-@media (min-width: 1024px) {
-  .settings label {
-    display: flex;
-    flex-basis: 45%;
-    align-items: initial;
-    height: 11%;
-    margin-top: 2vh;
-    margin-bottom: 5px;
-  }
-}
 .settings h2 {
   flex-basis: 100%;
 }
@@ -393,6 +379,13 @@ option[value=""][disabled] {
 
 option {
   color: rgba(102, 102, 102, 0.437);
+}
+
+.checkboxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
 }
 
 .grid {
@@ -996,8 +989,8 @@ nav {
   -webkit-appearance: none;
   appearance: none;
   position: relative;
-  width: 74px;
-  height: 34px;
+  width: 95px;
+  height: 40px;
   border-radius: 25px;
   background-color: #ccc;
   transition: background 0.3s;
