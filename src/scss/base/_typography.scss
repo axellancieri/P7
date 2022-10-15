@@ -120,7 +120,10 @@ select:required:invalid {
 }
 
 .checkboxes {
-    p {
+    label {
+        font-size: .9em;
+    }
+    .switch {
         font-size: .9em;
     }
 }

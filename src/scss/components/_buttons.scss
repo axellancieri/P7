@@ -89,28 +89,41 @@
     position: relative;
     width: 95px;
     height: 40px;
+    border: 2px solid rgba(224, 219, 219, 0.829);
     border-radius: 25px;
     background-color: #ccc;
     transition: background .3s;
     outline: none;
     cursor: pointer;
-    &::after {
-        content: '';
+    margin:0;
+    &::after,
+    &::before {
+        z-index: 2;
         position: absolute;
         top: 50%;
-        left: 30%;
+        left: 15%;
         transform: translate(-50%, -50%);
+    }
+    &::before {
+        content: 'ON';
+        color: white;
+        left: 16px;
+    }
+    &::after {
         border-radius: 50%;
-        height: 1.25rem;
-        width: 1.25rem;
+        height: 1.5rem;
+        width: 1.5rem;
         background-color: white;
-        transition: left .3s;
+        border: 2px solid rgba(224, 219, 219, 0.829);
+        transition: left .4s;
+        content: '';
     }
     &:checked {
-        background-color: rgb(141, 221, 141);
+        background-color: rgba(76, 71, 175, 0.776);
+        
     }
     &:checked::after {
-        left: 70%;
+        left: 83%;
     }
     @include mq('m') {
         height: 39px;
@@ -122,5 +135,22 @@
         height: 50px;
         width: 120px;
         margin: 2vh auto 2vw 15px;
+    }
+}
+
+.switch {
+    position: relative;
+    width: 95px;
+    height: 40px;
+    border-radius: 25px;
+    &::after {
+        z-index: 1;
+        position: absolute;
+        top: 47%;
+        left: 81%;
+        transform: translate(-50%, -50%);
+        color: white;
+        content: 'OFF';
+        pointer-events: none;
     }
 }

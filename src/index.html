@@ -99,15 +99,17 @@
                 </fieldset>
                 <fieldset class="settings" id="sett">
                     <h2>Setting</h2>
-                        <div class="checkboxes">
-                            <p>Send Email Notifications</p>
-                            <label  data-checked="ON" data-checked="OFF"></label>
-                            <input type="checkbox" class="checkbox" id="chkboxEmail" placeholder="">
+                        <div class="checkboxes">                          
+                            <label for="chkboxEmail" >Send Email Notifications</label>
+                            <span class="switch">
+                                <input type="checkbox" class="checkbox" id="chkboxEmail">
+                            </span>
                         </div>
                         <div class="checkboxes">
-                            <p>Set Profile to Public</p>
-                            <label data-checked="ON" data-checked="OFF"></label>
-                            <input type="checkbox" class="checkbox" id="chkboxSetProf">
+                            <label for="chkboxSetProf" >Set Profile to Public</label>
+                            <span class="switch">
+                                <input type="checkbox" class="checkbox" id="chkboxSetProf">
+                            </span>
                         </div>
                         <select name="time_zone" class="time-zone">
                             <option value="" disabled selected>Select Timezone</option>
