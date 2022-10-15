@@ -13,7 +13,7 @@ main {
 .dashboard {
   @include flexing();
   background-color: white;
-  padding: 0 0 15px 19px;
+  padding: 0 0 15px 16px;
   .grey-space {
     flex-grow: 1;
     background-color: rgba(224, 223, 223, 0.393);
@@ -71,7 +71,7 @@ main {
     $dire: row,
     $wrap: wrap,
     $justCont: center);
-  padding: 0px 19px 15px 19px;
+  padding: 0px 16px 15px 16px;
   border-bottom: 1px solid #80808070;
   h2 {
     flex-basis: 100%;
@@ -107,7 +107,7 @@ main {
   @include flexing(
     $dire: row,
     $wrap: wrap);
-  padding: 0px 19px 15px 19px;
+  padding: 0px 16px 15px 16px;
   border-bottom: 1px solid grey;
   h2 {
     flex-basis: 100%;
@@ -138,7 +138,7 @@ main {
   @include flexing(
     $dire: row,
     $wrap: wrap);
-  padding: 0px 19px 15px 19px;
+  padding: 0px 16px 15px 16px;
   border-bottom: 1px solid grey;
   h2 {
     flex-basis: 100%;
@@ -169,7 +169,7 @@ main {
   @include flexing(
     $dire: row,
     $wrap: wrap);
-  padding: 0px 19px 15px 19px;
+  padding: 0px 16px 15px 16px;
   border-bottom: 1px solid grey;
     h2 {
       flex-basis: 100%;
