@@ -131,10 +131,70 @@
 
     //message user button interactions
 
+//Settings local storage
+const settings = document.querySelector('.settings');
+const settButtons = settings.querySelectorAll('.btn-settings');
+const saveSett = settButtons[0];
+const cancelSett = settButtons[1];
+const emailNotif = settings.querySelector('#chkboxEmail');
+const setProf = settings.querySelector('#chkboxSetProf');
+const timeZone = settings.querySelector('.time-zone');
+
+/* function with checkboxes and timezone function */
+
+function localStorSettings() {
+    const localStorCheckBox = function(checkboxVar, objName) {
+        saveSett.addEventListener('click', () => {
+            if (checkboxVar.checked === true) {
+                localStorage.setItem(`${objName}`, 'true')
+            } else {
+                localStorage.setItem(`${objName}`, 'false')
+            }
+        })
+        
+        localStorage.getItem(`${objName}`);
+        if (localStorage.getItem(`${objName}`) === 'true') {
+            checkboxVar.checked = true;
+        } else {
+            checkboxVar.checked = false;
+        }
+    }
+    
+    const localStorTimeZone = function() {
+
+        /*Making the following if statement so it'll show 'select timezone'
+        when openning the site without any local storage */
+
+        if (localStorage.getItem('timeSet') === null ) {
+            localStorage.setItem('timeSet', '');
+        }
+
+        /* folloing statements within function make timezone select input operate
+        and behave as intended */
+
+        saveSett.addEventListener('click', () => {   
+            localStorage.setItem('timeSet', `${timeZone.value}`)         
+        })
+    
+        timeZone.value = localStorage.getItem('timeSet'); 
+    }
+
+cancelSett.addEventListener('click', () => {
+        localStorage.removeItem('emailNotifObj');
+        localStorage.removeItem('setProfObj');
+        localStorage.setItem('timeSet', '');
+    })
+    
+    localStorCheckBox(emailNotif, 'emailNotifObj');
+    localStorCheckBox(setProf, 'setProfObj');
+    localStorTimeZone();
+
+}    
 
 //CALLING ALL INTERACTIVE FUNCS
 
     window.addEventListener('load', () => {
+        localStorSettings()
         alertPopUp();
         activeButton;
         searchBar();
