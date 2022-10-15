@@ -55,7 +55,7 @@
     
             const slideNames = document.createElement('Div'); 
             slideNames.innerHTML = `<p>${pickUrValue(pplData, [i], 'name')}</p>`;
-            slideNames.classList.add('papaya');
+            slideNames.classList.add('message-search-popUp');
             slideNames.style.display = 'none';
             searchBar.insertAdjacentElement('afterend', slideNames);
             
@@ -72,7 +72,7 @@
             }
                 searchBar.addEventListener('keyup', searchMatch)   
                 /*
-                fosuing out of searchbar will make divs suggesting users
+                focusing out of searchbar will make divs suggesting users
                 to be deleted. Will get re displayed if searcbar is re focused
                 */      
                 searchBar.addEventListener('focusout', () => {
@@ -96,7 +96,9 @@
         const searchCheck = messageForm.querySelector('.message-search');
         const txtAreaCheck = messageForm.querySelector('.textarea');
         const alertMessageDiv = document.createElement('div');
+        alertMessageDiv.classList.add('textarea-errormsg');
         const errorDetailsDiv = document.createElement('Div');
+        errorDetailsDiv.classList.add('textarea-errormsg');
         button.insertAdjacentElement('beforebegin', alertMessageDiv);
 
         // making this event so it wont reload page
@@ -110,14 +112,16 @@
         button.addEventListener('mousedown', () => {
             for ( i = 0; i < pplData.length; i++ ) {
                 if (searchCheck.value.includes(pickUrValue(pplData, [i], 'name')) && !!txtAreaCheck.value && txtAreaCheck.value.length === txtAreaCheck.value.trim().length) {
-                    
+                    alertMessageDiv.style.backgroundColor = 'rgba(76, 71, 175, 0.776)';
                     alertMessageDiv.innerHTML = `<p>Message Sent! you'll receive a copy on your inbox</p>`
                     break
                 } else {
-                    alertMessageDiv.innerHTML = `<p>ERROR <span id="errorMessage">"Read more"</span> to get details</p>`
+                    alertMessageDiv.style.backgroundColor = 'rgba(225, 34, 34, 0.5607843137)';
+                    alertMessageDiv.innerHTML = `<p>ERROR<br> <span id="errorMessage">Read more</span> to get details</p>`
                     /*Making an error message dropdown text with more details*/
                     const errorMessage = alertMessageDiv.querySelector('#errorMessage');
-                    errorDetailsDiv.innerHTML = '<p>Check for empty spaces at the beginning of your text and that the name and last name of the person sending the message is correct. <span id="errorDetails">Quit "Read more"</span></p>';
+                    errorDetailsDiv.style.backgroundColor = 'rgba(225, 34, 34, 0.5607843137)';
+                    errorDetailsDiv.innerHTML = '<p>Check for empty spaces at the beginning of your text and that the name and last name of the person sending the message is correct. <span id="errorDetails">Close Read more</span></p>';
                     errorMessage.addEventListener('mousedown', () => {
                         alertMessageDiv.insertAdjacentElement('afterend', errorDetailsDiv)
                     });  
@@ -128,7 +132,6 @@
             }
         })          
     }
-
     //message user button interactions
 
 //Settings local storage

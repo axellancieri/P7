@@ -240,6 +240,17 @@ select:required:invalid {
 .message-search::placeholder {
   color: rgba(102, 102, 102, 0.437);
 }
+.message-search-popUp {
+  margin: 1px auto 1px 0px;
+  padding: 0 15px;
+  background-color: rgba(60, 52, 207, 0.308);
+  outline: none;
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+.message-search-popUp p {
+  margin: 0;
+}
 @media (min-width: 768px) {
   .message-search {
     margin: 0 0 10px;
@@ -268,6 +279,19 @@ select:required:invalid {
 }
 .textarea::placeholder {
   color: rgba(102, 102, 102, 0.437);
+}
+.textarea-errormsg {
+  border-radius: 10px;
+  padding: 5px 10px;
+  color: white;
+  margin: 5px 0 0;
+}
+.textarea-errormsg p {
+  margin: 0;
+}
+.textarea-errormsg span {
+  color: rgba(78, 75, 110, 0.466);
+  text-decoration: underline;
 }
 @media (min-width: 768px) {
   .textarea {
@@ -620,7 +644,7 @@ header p {
 .flexing-socials {
   display: flex;
   flex-basis: 100%;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin: 10px 0;
   border: 1px solid #c5c5c5;
   border-radius: 10px;
@@ -1091,14 +1115,18 @@ nav {
   }
 }
 
-.svg-social-icons {
+.social-icons {
   display: flex;
   flex-basis: 12%;
   order: -1;
-  margin: auto 0 auto 5vw;
-  padding: 13px;
+  margin: auto 2vw auto 5vw;
+  padding: 17px;
   background-color: rgba(76, 71, 175, 0.776);
   border-radius: 50%;
+}
+
+.svg-social-icons {
+  width: 8vh;
 }
 
 .traffic-graphic {

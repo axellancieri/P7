@@ -81,15 +81,18 @@
   }
 }
 
-.svg-social-icons {
+.social-icons {
   @include flexing(
     $basis: 12%) {
     order: -1};
-    margin: auto 0 auto 5vw;
-    padding: 13px;
+    margin: auto 2vw auto 5vw;
+    padding: 17px;
     background-color: rgba(76, 71, 175, 0.776);
-    border-radius: 50%;
-  
+    border-radius: 50%;  
+}
+
+.svg-social-icons {
+    width: 8vh;
 }
 
 .traffic-graphic {
