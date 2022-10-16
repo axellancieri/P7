@@ -52,6 +52,7 @@ transform-box: fill-box; /* gotta do this (seen on comments) so it behaves as ex
     }
   }
   &-errorreadme {
-    animation: opaci .5s linear forwards;
+    animation: slideDown .8s linear forwards,
+               opaci .5s linear forwards;
   }
 }

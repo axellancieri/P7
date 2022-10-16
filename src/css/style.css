@@ -1271,6 +1271,18 @@ nav {
   height: 150px;
 }
 
+#closeTagError {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+#closeTagCorrect {
+  position: absolute;
+  right: 20px;
+  top: 4px;
+}
+
 /* --------------------------
   Keyframes
 --------------------------- */
@@ -1319,7 +1331,7 @@ nav {
   animation: slideDown 0.8s linear forwards;
 }
 .textarea-errorreadme {
-  animation: opaci 0.5s linear forwards;
+  animation: slideDown 0.8s linear forwards, opaci 0.5s linear forwards;
 }
 
 .chart {
