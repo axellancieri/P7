@@ -353,23 +353,50 @@ select:required:invalid {
 }
 
 .time-zone {
+  height: 2.7em;
+  flex-basis: 100%;
+  margin-top: 20px;
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.time-zone select {
   flex-basis: 100%;
   outline: none;
   height: 2.7em;
-  margin-top: 20px;
   background-color: rgba(193, 187, 187, 0.1490196078);
   border-radius: 5px;
   border: 1px solid rgba(152, 152, 152, 0.426);
   color: rgba(102, 102, 102, 0.437);
   padding-left: 8px;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  appearance: none;
 }
 @media (min-width: 1024px) {
-  .time-zone {
+  .time-zone select {
     flex-basis: 100%;
     margin-right: 5px;
     margin-top: 4vh;
     margin-bottom: 18px;
   }
+}
+.time-zone::after {
+  content: "\f0d7";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: rgba(76, 71, 175, 0.776);
+  z-index: 1;
+  font-size: 25px;
+  line-height: 30px;
+  padding-right: 2px;
+  z-index: 1;
+  width: 10%;
+  height: 100%;
+  pointer-events: none;
+  box-sizing: border-box;
 }
 
 select:required:invalid {

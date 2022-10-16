@@ -158,7 +158,7 @@
     const cancelSett = settButtons[1];
     const emailNotif = settings.querySelector('#chkboxEmail');
     const setProf = settings.querySelector('#chkboxSetProf');
-    const timeZone = settings.querySelector('.time-zone');
+    const timeZone = settings.querySelector('.time-zone select');
 
 /* function with checkboxes and timezone function */
 

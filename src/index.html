@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://kit.fontawesome.com/f686b5e7e8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <title>Document</title>
 </head>
@@ -111,13 +112,15 @@
                                 <input type="checkbox" class="checkbox" id="chkboxSetProf">
                             </span>
                         </div>
-                        <select name="time_zone" class="time-zone">
-                            <option value="" disabled selected>Select Timezone</option>
-                            <option value="est">EST</option>
-                            <option value="pst">PST</option>
-                            <option value="ct">CT</option>
-                            <option value="mnt">MNT</option>
-                        </select>
+                        <label class="time-zone">
+                            <select name="time_zone">
+                                <option value="" disabled selected>Select Timezone</option>
+                                <option value="est">EST</option>
+                                <option value="pst">PST</option>
+                                <option value="ct">CT</option>
+                                <option value="mnt">MNT</option>
+                            </select>
+                        </label>
 
                         <button type="button" class="btn-settings">Save</button>
                         <button type="button" class="btn-settings" id="cancel-button-color">Cancel</button>
