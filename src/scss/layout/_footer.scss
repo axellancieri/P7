@@ -54,7 +54,7 @@ form {
   }
   @include mq('m') {
     margin: 0 0 10px;
-    height: 6vh;
+    height: 4vw;
   }
   @include mq('l') {
     margin: 0;
@@ -65,7 +65,7 @@ form {
 .textarea {
   margin: 5px 0px;
   padding: 10px;
-  height: 20vh;
+  height: 30vw;
   background-color: #c1bbbb26;
   border-radius: 5px;
   border: 1px solid rgba(152, 152, 152, 0.693);
@@ -91,7 +91,7 @@ form {
     }
   }
   @include mq('m') {
-    height: 23vh;
+    height: 15vw;
   }
   @include mq('l') {
     flex-basis: 60%;
@@ -122,7 +122,7 @@ form {
   @include mq('l') {
     flex-direction: column;
     flex-wrap: nowrap;
-    align-items: flex-start;
+    align-items: normal;
     flex: 1;
     padding: 0 10px 20px 15px;
     margin-bottom: 0;
@@ -140,8 +140,9 @@ form {
   position: relative;
   @include mq('l') {
     margin-right: 5px;
-    margin-top: 4vh;
+    margin-top: 3vw;
     margin-bottom: 18px;
+    overflow: inherit;
   }
   select {
     flex-basis: 100%;
@@ -156,9 +157,6 @@ form {
     vertical-align: middle;
     -webkit-appearance: none;
     appearance: none;
-    @include mq('l') {
-      width: 43.4vw;
-    }
   }
   &::after {
     content: '\f0d7';

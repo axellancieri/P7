@@ -10,16 +10,24 @@
         &-donut {
             padding-bottom: 10px;
         }
+        &-line {
+            @include mq('m') {
+                height: 40vw!important;
+            }
+            @include mq('l') {
+                height: 35vw!important;
+            }
+        }
         @include mq('chart') {
-            height: 50vh;
+            height: 30vw;
         }
         @include mq('m') {
             flex-basis: 100%;
-            height: 70vh;
+            height: 25vw;
         }
         @include mq('l') {
-            height: 60vh;
-            margin-bottom: 5vh;
+            height: 23vw;
+            margin-bottom: 2vw;
         }
     }
 

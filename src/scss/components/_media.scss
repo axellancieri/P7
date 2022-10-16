@@ -103,9 +103,9 @@
 }
 
 .svg-social-icons {
-    width: 8vh;
+    width: 12vw;
     @include mq('m') {
-      width: 7vh;
+      width: 4.5vw;
     }
     @include mq('l') {
       width: 4vw;

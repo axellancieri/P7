@@ -101,10 +101,11 @@
       $justCont: space-between);
     flex: 1;
     @include mq('m') {
-        margin: 5vh 0;
+        margin: 3vw 0;
     }
     @include mq('l') {
         width: 100%;
+        margin: 1.5vw 0;
     }
   }
 
