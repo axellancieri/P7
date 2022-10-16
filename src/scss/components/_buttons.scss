@@ -36,13 +36,22 @@
     }
 }
 
+.buttonsDiv {
+    @include flexing(
+        $justCont: space-between);
+    flex: 1;
+    @include mq('l') {
+        width: 100%;
+    }
+}
+
 #cancel-button-color {
     background-color: rgba(132, 124, 124, 0.752);
     @include mq('m') {
         margin-left: auto;
     }
     @include mq('l') {
-        margin-right: 5px;
+        margin-right: 0;
     }
 }
 
@@ -94,6 +103,9 @@
     @include mq('m') {
         margin: 5vh 0;
     }
+    @include mq('l') {
+        width: 100%;
+    }
   }
 
 .switch {
@@ -104,6 +116,10 @@
     @include mq('m') {
         margin-left: auto;
         margin-right: 45vw;
+    }
+    @include mq('l') {
+        margin-left: auto;
+        margin-right: 12vw;
     }
     &::after {
         z-index: 1;
@@ -158,11 +174,5 @@
     }
     &:checked::after {
         left: 80%;
-    }
-    @include mq('l') {
-        flex-basis: auto;
-        height: 50px;
-        width: 120px;
-        margin: 2vh auto 2vw 15px;
     }
 }

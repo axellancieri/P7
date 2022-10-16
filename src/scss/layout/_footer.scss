@@ -1,16 +1,9 @@
-.messageUser-settings {
+form {
   @include mq('l') {
     @include flexing(
       $dire: row,
-      $wrap: nowrap,
-      $justCont: center);
-    padding-bottom: 10px;
-    height: 100%;
+      $wrap: nowrap);
   }
-}
-// look int that, I think its doing nothing .message-label
-.message-label {
-    margin-bottom: 14px;
 }
 
 .message-us {
@@ -26,14 +19,13 @@
     padding-bottom: 20px;
   }
   @include mq('l') {
-    flex-wrap: nowrap;
-    flex-basis: 50%;
-    flex-grow: 1;
-    padding: 0 15px 0 10px;
+    @include flexing(
+      $dire: column,
+      $wrap: nowrap);
+    flex: 1;
+    padding: 0 15px 20px 10px;
     border-right: 1px solid grey;
     border-bottom: none;
-    align-content: space-between;
-    align-items: stretch;
   }
 }
   
@@ -128,9 +120,11 @@
     flex-basis: 100%;
   }
   @include mq('l') {
-    flex-basis: 50%;
-    flex-grow: 1;
-    padding: 0 10px 0 15px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    flex: 1;
+    padding: 0 10px 20px 15px;
     margin-bottom: 0;
     row-gap: 0;
   }
@@ -144,9 +138,6 @@
   display: flex;
   overflow: hidden;
   position: relative;
-  // @include mq('m') {
-
-  // }
   @include mq('l') {
     margin-right: 5px;
     margin-top: 4vh;
@@ -166,7 +157,7 @@
     -webkit-appearance: none;
     appearance: none;
     @include mq('l') {
-      flex-basis: 100%;
+      width: 43.4vw;
     }
   }
   &::after {

@@ -94,12 +94,21 @@
     padding: 15px;
     flex: 1;
     }
+    @include mq('l') {
+      margin: 8px 0 8px 8px;
+      padding: 16px;
+      justify-content: center;
+      flex: none;
+    }
 }
 
 .svg-social-icons {
     width: 8vh;
     @include mq('m') {
       width: 7vh;
+    }
+    @include mq('l') {
+      width: 4vw;
     }
 }
 
