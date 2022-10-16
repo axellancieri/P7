@@ -205,10 +205,3 @@ option[value=""][disabled] {
 option {
   color: $footer-color-text;
 }
-
-.checkboxes {
-  @include flexing(
-    $alignItem: center,
-    $justCont: space-between);
-  flex: 1;
-}

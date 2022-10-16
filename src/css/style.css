@@ -411,13 +411,6 @@ option {
   color: rgba(102, 102, 102, 0.437);
 }
 
-.checkboxes {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex: 1;
-}
-
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1015,6 +1008,30 @@ nav {
   }
 }
 
+.checkboxes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+}
+
+.switch {
+  position: relative;
+  width: 95px;
+  height: 40px;
+  border-radius: 25px;
+}
+.switch::after {
+  z-index: 1;
+  position: absolute;
+  top: 47%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  color: white;
+  content: "OFF";
+  pointer-events: none;
+}
+
 .checkbox {
   -webkit-appearance: none;
   appearance: none;
@@ -1054,7 +1071,7 @@ nav {
   background-color: rgba(76, 71, 175, 0.776);
 }
 .checkbox:checked::after {
-  left: 83%;
+  left: 80%;
 }
 @media (min-width: 768px) {
   .checkbox {
@@ -1070,23 +1087,6 @@ nav {
     width: 120px;
     margin: 2vh auto 2vw 15px;
   }
-}
-
-.switch {
-  position: relative;
-  width: 95px;
-  height: 40px;
-  border-radius: 25px;
-}
-.switch::after {
-  z-index: 1;
-  position: absolute;
-  top: 47%;
-  left: 81%;
-  transform: translate(-50%, -50%);
-  color: white;
-  content: "OFF";
-  pointer-events: none;
 }
 
 .new-members-images {

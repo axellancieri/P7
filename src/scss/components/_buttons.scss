@@ -83,6 +83,33 @@
     }
 }
 
+
+// SWITCH CHECKBOX
+
+.checkboxes {
+    @include flexing(
+      $alignItem: center,
+      $justCont: space-between);
+    flex: 1;
+  }
+
+.switch {
+    position: relative;
+    width: 95px;
+    height: 40px;
+    border-radius: 25px;
+    &::after {
+        z-index: 1;
+        position: absolute;
+        top: 47%;
+        left: 78%;
+        transform: translate(-50%, -50%);
+        color: white;
+        content: 'OFF';
+        pointer-events: none;
+    }
+}
+
 .checkbox {
     -webkit-appearance: none;
     appearance: none;
@@ -123,7 +150,7 @@
         
     }
     &:checked::after {
-        left: 83%;
+        left: 80%;
     }
     @include mq('m') {
         height: 39px;
@@ -135,22 +162,5 @@
         height: 50px;
         width: 120px;
         margin: 2vh auto 2vw 15px;
-    }
-}
-
-.switch {
-    position: relative;
-    width: 95px;
-    height: 40px;
-    border-radius: 25px;
-    &::after {
-        z-index: 1;
-        position: absolute;
-        top: 47%;
-        left: 81%;
-        transform: translate(-50%, -50%);
-        color: white;
-        content: 'OFF';
-        pointer-events: none;
     }
 }
