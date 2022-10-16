@@ -20,7 +20,7 @@
             .show(500)
             .delay(4000)
             .hide(500);
-    }
+    };
         getDiv.innerHTML = `<p><strong>Alert:</strong> &nbsp You have unread messages</p><span>X</span>`;
         getDiv.setAttribute('id', 'notif-alert');
         main.insertBefore(getDiv, traffic);   
@@ -33,11 +33,11 @@
         bellNotif.addEventListener('click', () => {
             $("#notif-alert").hide();
             $(".svg-head-bell ellipse").hide();
-            alertPopUp()
+            alertPopUp();
         });
         notifAlerts()
         
-    }
+    };
 
 //Message User interactivity
     //searchBar
@@ -59,9 +59,9 @@
             slideNames.style.display = 'none';
             searchBar.insertAdjacentElement('afterend', slideNames);
             
-            function searchMatch() {
-                searchBar.value = searchBar.value.toLowerCase()
-                searchLowCase = searchBar.value   
+            const searchMatch = function() {
+                searchBar.value = searchBar.value.toLowerCase();
+                searchLowCase = searchBar.value;   
                     if (!slideNames.innerHTML.toLowerCase().includes(searchLowCase)) {
                         slideNames.style.display = 'none';
                     } else if (searchLowCase.length === 0) {
@@ -69,7 +69,7 @@
                     } else {
                         slideNames.style.display = 'flex';
                     }
-            }
+            };
                 searchBar.addEventListener('keyup', searchMatch)   
                 /*
                 focusing out of searchbar will make divs suggesting users
@@ -77,17 +77,17 @@
                 */      
                 searchBar.addEventListener('focusout', () => {
                     slideNames.remove()
-            })
+            });
             /*
             on mouse click it'll pick the name of the person selected and display
             it on search bar text
             */
             slideNames.addEventListener('mousedown', () => {
                 searchBar.value = pickUrValue(pplData, [i], 'name');
-            })
+            });
     
             }
-        });
+        })
     
     }
 
@@ -106,13 +106,13 @@
         // making this event so it wont reload page
 
         button.addEventListener('click', (e) => {
-            e.preventDefault()
-        })
+            e.preventDefault();
+        });
 
         /* Making even listener on button and displaying error message if username is not complete or message returns null or has a white space at start and also if its empty */
 
         button.addEventListener('mousedown', () => {
-            for ( i = 0; i < pplData.length; i++ ) {
+            for ( let i = 0; i < pplData.length; i++ ) {
                 if (searchCheck.value.includes(pickUrValue(pplData, [i], 'name')) && !!txtAreaCheck.value && txtAreaCheck.value.length === txtAreaCheck.value.trim().length) {
                     button.insertAdjacentElement('beforebegin', alertMessageDiv);
                     /* Following 2 lines make the animation proc if you change from success message to fail one
@@ -125,9 +125,9 @@
                     alertMessageDiv.innerHTML = `<p>Message Sent! you'll receive a copy on your inbox</p><span id="closeTagCorrect" > X </span>`;
                     const closeCorrMsg = messageForm.querySelector('#closeTagCorrect');
                     closeCorrMsg.addEventListener('click', () => {
-                        alertMessageDiv.remove()
+                        alertMessageDiv.remove();
                     });
-                    break
+                    break;
                 } else {
                     button.insertAdjacentElement('beforebegin', alertMessageDiv);
                     /* Following 2 lines make the animation proc if you change from success message to fail one
@@ -137,7 +137,7 @@
                     
                     alertMessageDiv.style.backgroundColor = 'rgba(225, 34, 34, 0.5607843137)';
                     alertMessageDiv.classList.add('textarea-errormsg-animation');
-                    alertMessageDiv.innerHTML = `<p>ERROR<br> <span id="errorMessage">Read more</span> to get details</p><span id="closeTagError" > X </span>`
+                    alertMessageDiv.innerHTML = `<p>ERROR<br> <span id="errorMessage">Read more</span> to get details</p><span id="closeTagError" > X </span>`;
                     /*Making an error message dropdown text with more details*/
                     const errorMessage = alertMessageDiv.querySelector('#errorMessage');
                     errorDetailsDiv.style.backgroundColor = 'rgba(225, 34, 34, 0.5607843137)';
@@ -145,18 +145,19 @@
                     errorDetailsDiv.innerHTML = '<p>Check for empty spaces at the beginning of your text and that the name and last name of the person sending the message is correct. <span id="errorDetails">Close Read more</span></p>';
                     
                     errorMessage.addEventListener('mousedown', () => {
-                        alertMessageDiv.insertAdjacentElement('afterend', errorDetailsDiv)
+                        alertMessageDiv.insertAdjacentElement('afterend', errorDetailsDiv);
                     });  
                     const closeErrMsg = messageForm.querySelector('#closeTagError');
                     closeErrMsg.addEventListener('click', () => {
-                        alertMessageDiv.remove()
+                        alertMessageDiv.remove();
+                        errorDetailsDiv.remove();
                     });
                     errorDetailsDiv.addEventListener('click', () => {
-                        errorDetailsDiv.remove()
+                        errorDetailsDiv.remove();
                     });
                 }   
             }
-        })          
+        });          
     }
     //message user button interactions
 
@@ -175,11 +176,11 @@
         const localStorCheckBox = function(checkboxVar, objName) {
             saveSett.addEventListener('click', () => {
                 if (checkboxVar.checked === true) {
-                    localStorage.setItem(`${objName}`, 'true')
+                    localStorage.setItem(`${objName}`, 'true');
                 } else {
-                    localStorage.setItem(`${objName}`, 'false')
+                    localStorage.setItem(`${objName}`, 'false');
                 }
-            })
+            });
             
             localStorage.getItem(`${objName}`);
             if (localStorage.getItem(`${objName}`) === 'true') {
@@ -187,7 +188,7 @@
             } else {
                 checkboxVar.checked = false;
             }
-        }
+        };
         
         const localStorTimeZone = function() {
 
@@ -202,11 +203,11 @@
             and behave as intended */
 
             saveSett.addEventListener('click', () => {   
-                localStorage.setItem('timeSet', `${timeZone.value}`)         
-            })
+                localStorage.setItem('timeSet', `${timeZone.value}`);         
+            });
         
             timeZone.value = localStorage.getItem('timeSet'); 
-        }
+        };
 
         cancelSett.addEventListener('click', () => {
             emailNotif.checked = false;
@@ -215,7 +216,7 @@
             localStorage.removeItem('setProfObj');
             timeZone.value = '';
             localStorage.setItem('timeSet', '');
-            })
+            });
         
         localStorCheckBox(emailNotif, 'emailNotifObj');
         localStorCheckBox(setProf, 'setProfObj');
@@ -230,5 +231,5 @@
         alertPopUp();
         activeButton;
         searchBar();
-        buttonMessage()
+        buttonMessage();
     });

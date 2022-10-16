@@ -51,7 +51,7 @@
                         <h3 class="flexing-socials-title">${pickUrValue(socialStatsData, [i], 'name')}</h3>
                         <h3 class="flexing-socials-numbers">${pickUrValue(socialStatsData, [i], 'numbers')}</h3>
                     </div>
-                    <div class="social-icons">
+                    <div class="social-icons" alt="${pickUrValue(socialStatsData, [i], 'name')} icon">
                         ${pickUrValue(socialStatsData, [i], 'image')}
                     </div>
                 </div>`;
@@ -94,7 +94,7 @@
                 bdate: '10/15/20',
                 image: 'images/member-4.jpg'
             }
-        ]
+        ];
 
         function newMembers() {
 
@@ -116,10 +116,10 @@
                 }
                 return times;
             }
-            sectMemb.classList.add('new-members')
-            sectMemb.innerHTML = '<h2>New Members</h2>'
-            aside.insertAdjacentElement('beforeEnd', sectMemb)
-            sectMemb.insertAdjacentHTML('beforeEnd', newMembCards(4)) 
+            sectMemb.classList.add('new-members');
+            sectMemb.innerHTML = '<h2>New Members</h2>';
+            aside.insertAdjacentElement('beforeEnd', sectMemb);
+            sectMemb.insertAdjacentHTML('beforeEnd', newMembCards(4));
 
         }
 
@@ -146,14 +146,14 @@
                     activity: "posted <strong>WebApp's SEO Tips</strong>",
                     time: '1 day ago'
                 }
-            ]
+            ];
             //id="no-border"
             function recMemCards(num) {
                 let times = ``;
                 for ( let i = 0; i < num; i++ ) {
                     times += `
                             <div class="flexing-members" >
-                                <img src="${pickUrValue(pplData, [i], 'image')}" class="new-members-images">
+                                <img src="${pickUrValue(pplData, [i], 'image')}" class="new-members-images" alt="image of ${pickUrValue(pplData, [i], 'name')}">
                                 <div class="recent-activity-margin">
                                     <p>${pickUrValue(pplData, [i], 'name')} ${pickUrValue(recentMembData, [i], 'activity')}</p>
                                     <p>${pickUrValue(recentMembData, [i], 'time')}</p>
@@ -165,10 +165,10 @@
                 return times;
             }
 
-            sectRec.classList.add('new-members')
-            sectRec.innerHTML = '<h2>Recent Activity</h2>'
-            aside.insertAdjacentElement('beforeEnd', sectRec)
-            sectRec.insertAdjacentHTML('beforeEnd', recMemCards(4)) 
+            sectRec.classList.add('new-members');
+            sectRec.innerHTML = '<h2>Recent Activity</h2>';
+            aside.insertAdjacentElement('beforeEnd', sectRec);
+            sectRec.insertAdjacentHTML('beforeEnd', recMemCards(4)); 
 
         } 
 
@@ -178,8 +178,8 @@
         socialStats();
         // Getting Aside created
             aside.classList.add('members');
-            aside.setAttribute('id', 'ppl')
-            main.insertAdjacentElement('afterend', aside)
+            aside.setAttribute('id', 'ppl');
+            main.insertAdjacentElement('afterend', aside);
         newMembers(); 
         recentMembers();   
         //taking borderoff first image on each aside sections

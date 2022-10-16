@@ -11,19 +11,19 @@
         {x:'Prev.F', y:3000}, {x:'Prev.Sat', y:3500}, {x:'Prev.Sun', y:4500},
         {x:'Mon', y:3000}, {x:'Tus', y:3300}, {x:'Wedn', y:3700},
         {x:'Thurs', y:3900}, {x:'Fri', y:4400}, {x:'Sat', y:4900},
-        {x:'Sun', y:5500}]
+        {x:'Sun', y:5500}];
     
     const weeklyChart = [
         {x:'Week 1', y:20500}, {x:'Week 2', y:24000}, {x:'Week 3', y:26500},
         {x:'Week 4', y:11000}, {x:'Week 5', y:27000}, {x:'Week 6', y:25000},
         {x:'Week 7', y:22000}, {x:'Week 8', y:15000}, {x:'Week 9', y:31000},
-        {x:'Curr. Week', y:30000}]
+        {x:'Curr. Week', y:30000}];
     
     const monthlyChart = [
         {x:'Jan', y:111000}, {x:'Feb', y:130000}, {x:'Mar', y:150000},
         {x:'Apr', y:75000}, {x:'May', y:90000}, {x:'Jun', y:60000},
         {x:'Jul', y:80000}, {x:'Aug', y:111000}, {x:'Sept', y:160000},
-        {x:'Oct', y:165000}]
+        {x:'Oct', y:165000}];
     
     const trafficButtons = document.querySelectorAll('.traffic button');
 
@@ -40,7 +40,7 @@
             });
         
             chart.update();
-}
+};
 
 // running eventListener on each button to displey its corresponding chart
     for (let i = 0; i < trafficButtons.length; i++) {
@@ -58,7 +58,7 @@
         updateChart(chartLine, tButton, dataLine)
             
         })
-    }
+    };
 
 
 // Traffic line chart
@@ -124,7 +124,7 @@ const dataBar = {
         borderColor: 'none',
         backgroundColor: 'rgba(76, 71, 175, 0.8)',
         }]
-}
+};
 
 const configBar = {
     type: 'bar',
