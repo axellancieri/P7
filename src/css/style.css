@@ -334,13 +334,13 @@ select:required:invalid {
   padding: 0 19px;
   margin-bottom: 10px;
 }
-.settings h2 {
-  flex-basis: 100%;
-}
 @media (min-width: 768px) {
   .settings {
-    justify-content: flex-start;
+    row-gap: 0;
   }
+}
+.settings h2 {
+  flex-basis: 100%;
 }
 @media (min-width: 1024px) {
   .settings {
@@ -360,6 +360,13 @@ select:required:invalid {
   overflow: hidden;
   position: relative;
 }
+@media (min-width: 1024px) {
+  .time-zone {
+    margin-right: 5px;
+    margin-top: 4vh;
+    margin-bottom: 18px;
+  }
+}
 .time-zone select {
   flex-basis: 100%;
   outline: none;
@@ -376,9 +383,6 @@ select:required:invalid {
 @media (min-width: 1024px) {
   .time-zone select {
     flex-basis: 100%;
-    margin-right: 5px;
-    margin-top: 4vh;
-    margin-bottom: 18px;
   }
 }
 .time-zone::after {
@@ -397,6 +401,13 @@ select:required:invalid {
   height: 100%;
   pointer-events: none;
   box-sizing: border-box;
+}
+@media (min-width: 768px) {
+  .time-zone::after {
+    text-align: center;
+    width: 5%;
+    font-size: 23px;
+  }
 }
 
 select:required:invalid {
@@ -1014,12 +1025,23 @@ nav {
   align-items: center;
   flex: 1;
 }
+@media (min-width: 768px) {
+  .checkboxes {
+    margin: 5vh 0;
+  }
+}
 
 .switch {
   position: relative;
   width: 95px;
   height: 40px;
   border-radius: 25px;
+}
+@media (min-width: 768px) {
+  .switch {
+    margin-left: auto;
+    margin-right: 45vw;
+  }
 }
 .switch::after {
   z-index: 1;
@@ -1072,13 +1094,6 @@ nav {
 }
 .checkbox:checked::after {
   left: 80%;
-}
-@media (min-width: 768px) {
-  .checkbox {
-    height: 39px;
-    flex-basis: 15%;
-    margin-right: 41vw;
-  }
 }
 @media (min-width: 1024px) {
   .checkbox {

@@ -119,27 +119,13 @@
     $alignCont: space-between) {
       row-gap: 1em;
     }
+    @include mq('m') {
+      row-gap: 0;
+    }
   padding: 0 19px;
   margin-bottom: 10px;
-  // label {
-  //   flex-basis: 70%;
-  //   @include mq('m') {
-  //     flex-basis: 35%;
-  //   }
-  //   @include mq ('l') {
-  //     @include flexing(
-  //       $basis: 45%,
-  //       $alignItem: initial);
-  //     height: 11%;      
-  //     margin-top: 2vh;
-  //     margin-bottom: 5px;
-  //   }
-  // }
   h2 {
     flex-basis: 100%;
-  }
-  @include mq('m') {
-    justify-content: flex-start;
   }
   @include mq('l') {
     flex-basis: 50%;
@@ -158,6 +144,14 @@
   display: flex;
   overflow: hidden;
   position: relative;
+  // @include mq('m') {
+
+  // }
+  @include mq('l') {
+    margin-right: 5px;
+    margin-top: 4vh;
+    margin-bottom: 18px;
+  }
   select {
     flex-basis: 100%;
     outline: none;
@@ -173,9 +167,6 @@
     appearance: none;
     @include mq('l') {
       flex-basis: 100%;
-      margin-right: 5px;
-      margin-top: 4vh;
-      margin-bottom: 18px;
     }
   }
   &::after {
@@ -192,6 +183,11 @@
     height: 100%; 
     pointer-events: none;
     box-sizing: border-box;
+    @include mq('m') {
+      text-align: center;
+      width: 5%;
+      font-size: 23px;
+    }
   }
 }
 

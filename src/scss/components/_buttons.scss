@@ -91,6 +91,9 @@
       $alignItem: center,
       $justCont: space-between);
     flex: 1;
+    @include mq('m') {
+        margin: 5vh 0;
+    }
   }
 
 .switch {
@@ -98,6 +101,10 @@
     width: 95px;
     height: 40px;
     border-radius: 25px;
+    @include mq('m') {
+        margin-left: auto;
+        margin-right: 45vw;
+    }
     &::after {
         z-index: 1;
         position: absolute;
@@ -151,11 +158,6 @@
     }
     &:checked::after {
         left: 80%;
-    }
-    @include mq('m') {
-        height: 39px;
-        flex-basis: 15%;
-        margin-right: 41vw;
     }
     @include mq('l') {
         flex-basis: auto;
