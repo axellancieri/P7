@@ -49,14 +49,24 @@ main {
     $justCont: space-between,
     $alignItem: center);
   flex: 1;
-  background-color: $primary-color;
-  margin: 1em;
+  background-color: rgba(76, 71, 175, 0.776);
+  margin: 1em 1em .5em 1em;
   border-radius: 10px;
   color: white;
+  @include mq('m') {
+    flex-basis: 100%;
+    background-color: rgba(76, 71, 175, 0.776);
+    margin: 1em 1em 0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
   p {
     @include flexing(
       $basis: auto);
     margin-left: 1em;
+    @include mq('m') {
+      margin: 1em auto;
+    }
   }
   span {
     @include flexing(
@@ -64,13 +74,16 @@ main {
       $basis: 10%);
     cursor: pointer;
     margin-right: 1em;
+    @include mq('m') {
+      margin: 1em auto;
+    }
   }
 }
 
 .recent-notif-act {
   display: flex;
   flex-basis: 100%;
-  margin: 1em;
+  margin: 0 1em 1em;
   color: white;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -89,8 +102,11 @@ main {
       opacity: 1;
     }
     @include mq ('m') {
-      margin: 2px 0;
-      justify-content: space-evenly;
+      justify-content: normal;
+      flex-basis: 50%;
+      div {
+        margin: auto;
+      }
     }
   }
   img {
@@ -110,8 +126,13 @@ main {
       font-size: 1em;
     }
   }
-  @include mq('m') {
-    margin: 0 1em;
+  @include mq ('m') {
+    flex-basis: 80%;
+    margin: 0 auto;
+    background-color: rgb(109 106 179 / 32%);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 }
 
@@ -119,11 +140,12 @@ main {
   margin: 0px 6vw;
   font-size: 10px;
   color: rgb(76 71 175 / 72%);
-    border: 1.5px solid white;
-    border-radius: 50%;
+  &-outsideDiv {
+    margin: auto 15px auto auto !important;
+  }
   @include mq('m') {
     font-size: 21px;
-    margin: 0px 0 0 4vw;
+    margin: auto;
   }
 }
 

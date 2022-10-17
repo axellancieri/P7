@@ -37,6 +37,7 @@
         closeNotifBar.addEventListener('click', () => {
             $("#notif-alert").hide();
             $(".svg-head-bell ellipse").hide();
+            $(".recent-notif-act").hide();
         });
             recentNotifs();
             notifAlerts();
@@ -73,7 +74,7 @@ function recentNotifs() {
                             <p>${pickUrValue(pplData, [i], 'name')} ${pickUrValue(recentMembData, [i], 'activity')}</p>
                             <p>${pickUrValue(recentMembData, [i], 'time')}</p>
                         </div>
-                        <div>
+                        <div class="notif-circle-outsideDiv">
                         <i class="fa-solid fa-circle notif-circle"></i>
                         </div>
                     </div>

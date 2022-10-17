@@ -517,14 +517,28 @@ header p {
   align-items: center;
   flex: 1;
   background-color: rgba(76, 71, 175, 0.776);
-  margin: 1em;
+  margin: 1em 1em 0.5em 1em;
   border-radius: 10px;
   color: white;
+}
+@media (min-width: 768px) {
+  #notif-alert {
+    flex-basis: 100%;
+    background-color: rgba(76, 71, 175, 0.776);
+    margin: 1em 1em 0;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+  }
 }
 #notif-alert p {
   display: flex;
   flex-basis: auto;
   margin-left: 1em;
+}
+@media (min-width: 768px) {
+  #notif-alert p {
+    margin: 1em auto;
+  }
 }
 #notif-alert span {
   display: flex;
@@ -533,11 +547,16 @@ header p {
   cursor: pointer;
   margin-right: 1em;
 }
+@media (min-width: 768px) {
+  #notif-alert span {
+    margin: 1em auto;
+  }
+}
 
 .recent-notif-act {
   display: flex;
   flex-basis: 100%;
-  margin: 1em;
+  margin: 0 1em 1em;
   color: white;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -557,8 +576,11 @@ header p {
 }
 @media (min-width: 768px) {
   .recent-notif-act-outerDiv {
-    margin: 2px 0;
-    justify-content: space-evenly;
+    justify-content: normal;
+    flex-basis: 50%;
+  }
+  .recent-notif-act-outerDiv div {
+    margin: auto;
   }
 }
 .recent-notif-act img {
@@ -584,7 +606,12 @@ header p {
 }
 @media (min-width: 768px) {
   .recent-notif-act {
-    margin: 0 1em;
+    flex-basis: 80%;
+    margin: 0 auto;
+    background-color: rgba(109, 106, 179, 0.32);
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 }
 
@@ -592,13 +619,14 @@ header p {
   margin: 0px 6vw;
   font-size: 10px;
   color: rgba(76, 71, 175, 0.72);
-  border: 1.5px solid white;
-  border-radius: 50%;
+}
+.notif-circle-outsideDiv {
+  margin: auto 15px auto auto !important;
 }
 @media (min-width: 768px) {
   .notif-circle {
     font-size: 21px;
-    margin: 0px 0 0 4vw;
+    margin: auto;
   }
 }
 
