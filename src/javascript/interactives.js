@@ -7,11 +7,10 @@
     const bellNotif = document.querySelector('.svg-head-bell');
     const activeButton = document.querySelector('#activeStart').focus();
     
-
     function alertPopUp() {
-        // Alerts function
-    const notifAlerts = function () {
-        $("#notif-alert")
+
+        const notifAlerts = function () {
+            $('#notif-alert')
             .hide()
             .slideDown(500)
             .delay(4000)
@@ -26,30 +25,26 @@
             .slideDown(500)
             .delay(4000)
             .slideUp(500);
-            
-    };
-        getDiv.innerHTML = `<p><strong>Alert:</strong> &nbsp You have unread messages</p><span>X</span>`;
+                
+        };
+
+        // Alerts function
+         getDiv.innerHTML = `<p><strong>Alert:</strong> &nbsp You have unread messages</p><span>X</span>`;
         getDiv.setAttribute('id', 'notif-alert');
         main.insertBefore(getDiv, traffic);   
         // making event listener on 'X' span element so it'll close the alertpopu
         const closeNotifBar = getDiv.querySelector('span');
         closeNotifBar.addEventListener('click', () => {
             $("#notif-alert").hide();
-            $(".recent-notif-act")
             $(".svg-head-bell ellipse").hide();
         });
-        bellNotif.addEventListener('click', () => {
-            $("#notif-alert").hide();
-            $(".recent-notif-act")
-            $(".svg-head-bell ellipse").hide();
-            alertPopUp();
-        });
-        recentNotifs();
-        notifAlerts();
-
-        
+            recentNotifs();
+            notifAlerts();
     };
 
+    bellNotif.addEventListener('click', () => {
+        alertPopUp();  
+    });
 //recent messages popup notif
 
 const recentNotifsPpl = document.createElement('Div');
@@ -172,6 +167,9 @@ function recentNotifs() {
                     closeCorrMsg.addEventListener('click', () => {
                         alertMessageDiv.remove();
                     });
+                    setTimeout( () => {
+                        alertMessageDiv.remove();
+                    }, 5000)
                     break;
                 } else {
                     button.insertAdjacentElement('beforebegin', alertMessageDiv);
@@ -193,6 +191,10 @@ function recentNotifs() {
                         alertMessageDiv.insertAdjacentElement('afterend', errorDetailsDiv);
                     });  
                     const closeErrMsg = messageForm.querySelector('#closeTagError');
+                    setTimeout( () => {
+                        alertMessageDiv.remove();
+                        errorDetailsDiv.remove()   
+                    }, 8000)
                     closeErrMsg.addEventListener('click', () => {
                         alertMessageDiv.remove();
                         errorDetailsDiv.remove();
