@@ -14,7 +14,7 @@
             .hide()
             .slideDown(500)
             .delay(4000)
-            .slideUp(500);
+            // .slideUp(500);
         $(".svg-head-bell ellipse")
             .hide()
             .show(500)
@@ -24,7 +24,7 @@
             .hide()
             .slideDown(500)
             .delay(4000)
-            .slideUp(500);
+            // .slideUp(500);
                 
         };
 
@@ -92,9 +92,9 @@ function recentNotifs() {
         recentNotifsPpl.innerHTML = `${recentNotifstext(4)}`;
     }
     main.insertBefore(recentNotifsPpl, traffic); 
-    
     const eachrecentNotifsPpl = recentNotifsPpl.querySelectorAll('.recent-notif-act-outerDiv');
     for ( let i = 0; i < eachrecentNotifsPpl.length; i++ ) {
+        eachrecentNotifsPpl[4].setAttribute('id','margin-right-l');
         eachrecentNotifsPpl[i].addEventListener('click', () => {
             eachrecentNotifsPpl[i].style.display = 'none';
         });
