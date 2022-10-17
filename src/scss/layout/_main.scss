@@ -86,19 +86,36 @@ main {
     &:target {
       background-color: rgba(76, 71, 175, 0.719);
       opacity: 1;
-      
+    }
+    @include mq ('m') {
+      margin: 2px 0;
+      justify-content: space-between;
     }
   }
   img {
     width: 15vw;
     height: 15vw;
     border-radius: 50%;
-    margin: 15px
+    margin: 15px;
+    @include mq('m') {
+    width: 10vw;
+    height: 10vw;
+    }
   }
   p {
     font-size: .7em;
     margin: 1px;
+    @include mq('m') {
+      font-size: 1em;
+    }
   }
+  @include mq('m') {
+    margin: 0 1em;
+  }
+}
+
+.notif-circle {
+  margin: 0px 6vw;
 }
 
 .traffic {

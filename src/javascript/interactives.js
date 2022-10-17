@@ -61,6 +61,9 @@ function recentNotifs() {
                             <p>${pickUrValue(pplData, [i], 'name')} ${pickUrValue(recentMembData, [i], 'activity')}</p>
                             <p>${pickUrValue(recentMembData, [i], 'time')}</p>
                         </div>
+                        <div>
+                        <i class="fa-solid fa-circle notif-circle"></i>
+                        </div>
                     </div>
             `;
         }
