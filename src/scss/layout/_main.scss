@@ -256,10 +256,27 @@ main {
     h2 {
       flex-basis: 100%;
     }
+  @include mq('chart') {
+    padding: 0px 16px 15px 16px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
   @include mq('m') {
+    flex-direction: row;
+    flex-wrap: wrap;
     padding: 10px;
     justify-content: space-between;
     flex: 1;
+  }
+  @include mq('ml') {
+    flex: 1 1 100%;
+  }
+  @include mq('l') {
+    padding: 10px;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
   }
 }
 
@@ -275,9 +292,21 @@ main {
   fill: white;
   &-rightSpace {
     margin-right: 10vw;
+    @include mq('chart') {
+      margin-right: 10vw;
+      padding: 0;
+    }
     @include mq('m') {
       padding-right: 2vw;
       margin-right: 0;
+    }
+    @include mq('ml') {
+      @include flexing(
+        $alignItem: flex-start,
+        $dire: column,
+        $justCont: center);
+    margin-right: auto;
+    padding-left: 1vw;
     }
     @include mq('l') {
       @include flexing(
@@ -285,7 +314,7 @@ main {
         $dire: column,
         $justCont: center);
     margin-right: auto;
-    padding-left: 1vw;
+    padding-left: 2vw;
     }
   }
   &-title {
@@ -298,13 +327,21 @@ main {
     margin: 0px;
     color: #393939aa;
   }
+  @include mq('chart') {
+    margin: 10px auto;
+    justify-content: flex-start;
+  }
   @include mq('m') {
     flex-basis: 30%;
     justify-content: space-between;
     padding: 17px 3px;
   }
-  @include mq('l') {
+  @include mq('ml') {
     flex-basis: 32.5%;
+    padding: 5px 0;
+  }
+  @include mq('l') {
+    flex-basis: 31.5%;
     padding: 5px 0;
   }
 }

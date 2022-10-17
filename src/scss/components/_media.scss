@@ -89,10 +89,18 @@
     padding: 17px;
     background-color: rgba(76, 71, 175, 0.776);
     border-radius: 50%;  
+    @include mq('chart') {
+      margin: auto 15px;
+      padding: 17px;
+      max-width: 4vw;
+    }
     @include mq('m') {
-    margin: 5px;
-    padding: 15px;
-    flex: 1;
+      margin: 5px;
+      padding: 15px;
+      flex: 1;
+      }
+    @include mq('ml') {
+      max-width: 4vw;
     }
     @include mq('l') {
       margin: 8px 0 8px 8px;
@@ -104,6 +112,9 @@
 
 .svg-social-icons {
     width: 12vw;
+    @include mq('chart') {
+      width: 6vw;
+    }
     @include mq('m') {
       width: 4.5vw;
     }
