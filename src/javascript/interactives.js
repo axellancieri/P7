@@ -14,7 +14,7 @@
             .hide()
             .slideDown(500)
             .delay(4000)
-            // .slideUp(500);
+            .slideUp(500);
         $(".svg-head-bell ellipse")
             .hide()
             .show(500)
@@ -24,7 +24,7 @@
             .hide()
             .slideDown(500)
             .delay(4000)
-            // .slideUp(500);
+            .slideUp(500);
                 
         };
 
@@ -43,7 +43,19 @@
     };
 
     bellNotif.addEventListener('click', () => {
-        alertPopUp();  
+        const justAlert = getComputedStyle(getDiv);
+        const pplNotifAlert = getComputedStyle(recentNotifsPpl)
+        if (justAlert.getPropertyValue('display') === 'flex' || pplNotifAlert.getPropertyValue('display') === 'flex') {
+            getDiv.style.display = 'none';
+            recentNotifsPpl.style.display = 'none';
+            bellNotif.classList.remove("fancyMov");
+            void bellNotif.offsetWidth;
+            
+        } else {
+            bellNotif.classList.add('fancyMov');
+            alertPopUp(); 
+        }
+         
     });
 //recent messages popup notif
 
