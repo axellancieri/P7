@@ -513,9 +513,9 @@ header p {
 
 #notif-alert {
   display: flex;
-  flex-basis: 100%;
   justify-content: space-between;
   align-items: center;
+  flex: 1;
   background-color: rgba(76, 71, 175, 0.776);
   margin: 1em;
   border-radius: 10px;
@@ -532,6 +532,37 @@ header p {
   justify-content: flex-end;
   cursor: pointer;
   margin-right: 1em;
+}
+
+.recent-notif-act {
+  display: flex;
+  flex-basis: 100%;
+  margin: 1em;
+  color: white;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  opacity: 0.8;
+}
+.recent-notif-act-outerDiv {
+  display: flex;
+  align-items: center;
+  background-color: rgba(76, 71, 175, 0.349);
+  border-radius: 20px;
+  margin: 2px 0;
+}
+.recent-notif-act-outerDiv:hover, .recent-notif-act-outerDiv:focus, .recent-notif-act-outerDiv:target {
+  background-color: rgba(76, 71, 175, 0.719);
+  opacity: 1;
+}
+.recent-notif-act img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  margin: 15px;
+}
+.recent-notif-act p {
+  font-size: 0.7em;
+  margin: 1px;
 }
 
 .traffic {

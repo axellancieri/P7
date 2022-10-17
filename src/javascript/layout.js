@@ -127,27 +127,27 @@
 
         //local variables
         const sectRec = document.createElement('SECTION');
-
+        const recentMembData = [
+            {
+                activity: "commented on <strong>WebApp's SEO Tips</strong>",
+                time: '4 hours ago'
+            },
+            {
+                activity: "liked the post <strong>Facebook's Changes for 2021</strong>",
+                time: '5 hours ago'
+            },
+            {
+                activity: "commented on <strong>Facebook's Changes for 2021</strong>",
+                time: '5 hours ago'
+            },
+            {
+                activity: "posted <strong>WebApp's SEO Tips</strong>",
+                time: '1 day ago'
+            }
+        ];
+        
         function recentMembers() {
-            const recentMembData = [
-                {
-                    activity: "commented on <strong>WebApp's SEO Tips</strong>",
-                    time: '4 hours ago'
-                },
-                {
-                    activity: "liked the post <strong>Facebook's Changes for 2021</strong>",
-                    time: '5 hours ago'
-                },
-                {
-                    activity: "commented on <strong>Facebook's Changes for 2021</strong>",
-                    time: '5 hours ago'
-                },
-                {
-                    activity: "posted <strong>WebApp's SEO Tips</strong>",
-                    time: '1 day ago'
-                }
-            ];
-            //id="no-border"
+
             function recMemCards(num) {
                 let times = ``;
                 for ( let i = 0; i < num; i++ ) {
@@ -180,8 +180,8 @@
             aside.classList.add('members');
             aside.setAttribute('id', 'ppl');
             main.insertAdjacentElement('afterend', aside);
-        newMembers(); 
-        recentMembers();   
+        newMembers();   
+        recentMembers();
         //taking borderoff first image on each aside sections
             const noBorderMemb = aside.querySelectorAll('.new-members > .flexing-members');
             noBorderMemb[0].setAttribute('id', 'no-border');

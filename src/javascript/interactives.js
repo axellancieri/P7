@@ -6,6 +6,7 @@
     const traffic = document.querySelector('.traffic');
     const bellNotif = document.querySelector('.svg-head-bell');
     const activeButton = document.querySelector('#activeStart').focus();
+    
 
     function alertPopUp() {
         // Alerts function
@@ -20,6 +21,12 @@
             .show(500)
             .delay(4000)
             .hide(500);
+        $(".recent-notif-act")
+            .hide()
+            .slideDown(500)
+            .delay(4000)
+            .slideUp(500);
+            
     };
         getDiv.innerHTML = `<p><strong>Alert:</strong> &nbsp You have unread messages</p><span>X</span>`;
         getDiv.setAttribute('id', 'notif-alert');
@@ -28,16 +35,54 @@
         const closeNotifBar = getDiv.querySelector('span');
         closeNotifBar.addEventListener('click', () => {
             $("#notif-alert").hide();
+            $(".recent-notif-act")
             $(".svg-head-bell ellipse").hide();
         });
         bellNotif.addEventListener('click', () => {
             $("#notif-alert").hide();
+            $(".recent-notif-act")
             $(".svg-head-bell ellipse").hide();
             alertPopUp();
         });
-        notifAlerts()
+        recentNotifs();
+        notifAlerts();
+
         
     };
+
+//recent messages popup notif
+
+const recentNotifsPpl = document.createElement('Div');
+
+function recentNotifs() {
+
+    function recentNotifstext(num) {
+        let times = ``;
+        for ( let i = 0; i < num; i++ ) {
+            times += `
+                    <div class="recent-notif-act-outerDiv" >
+                        <img src="${pickUrValue(pplData, [i], 'image')}" alt="image of ${pickUrValue(pplData, [i], 'name')}">
+                        <div class="recent-activity-margin">
+                            <p>${pickUrValue(pplData, [i], 'name')} ${pickUrValue(recentMembData, [i], 'activity')}</p>
+                            <p>${pickUrValue(recentMembData, [i], 'time')}</p>
+                        </div>
+                    </div>
+            `;
+        }
+        return times;
+    }
+
+    recentNotifsPpl.classList.add('recent-notif-act');
+    recentNotifsPpl.innerHTML = `${recentNotifstext(3)}`;
+    main.insertBefore(recentNotifsPpl, traffic); 
+    
+    const eachrecentNotifsPpl = recentNotifsPpl.querySelectorAll('.recent-notif-act-outerDiv');
+    for ( let i = 0; i < eachrecentNotifsPpl.length; i++ ) {
+        eachrecentNotifsPpl[i].addEventListener('click', () => {
+            eachrecentNotifsPpl[i].style.display = 'none';
+        });
+    }
+} 
 
 //Message User interactivity
     //searchBar
