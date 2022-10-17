@@ -94,7 +94,6 @@ function recentNotifs() {
     main.insertBefore(recentNotifsPpl, traffic); 
     const eachrecentNotifsPpl = recentNotifsPpl.querySelectorAll('.recent-notif-act-outerDiv');
     for ( let i = 0; i < eachrecentNotifsPpl.length; i++ ) {
-        eachrecentNotifsPpl[4].setAttribute('id','margin-right-l');
         eachrecentNotifsPpl[i].addEventListener('click', () => {
             eachrecentNotifsPpl[i].style.display = 'none';
         });
