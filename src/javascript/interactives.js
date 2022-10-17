@@ -14,7 +14,7 @@
             .hide()
             .slideDown(500)
             .delay(4000)
-            .slideUp(500);
+            // .slideUp(500);
         $(".svg-head-bell ellipse")
             .hide()
             .show(500)
@@ -24,7 +24,7 @@
             .hide()
             .slideDown(500)
             .delay(4000)
-            .slideUp(500);
+            // .slideUp(500);
                 
         };
 
@@ -68,7 +68,13 @@ function recentNotifs() {
     }
 
     recentNotifsPpl.classList.add('recent-notif-act');
-    recentNotifsPpl.innerHTML = `${recentNotifstext(3)}`;
+    if (main.clientWidth <= 320) {
+        recentNotifsPpl.innerHTML = `${recentNotifstext(2)}`;
+    } else if (main.clientWidth <= 768) {
+        recentNotifsPpl.innerHTML = `${recentNotifstext(3)}`;
+    } else {
+        recentNotifsPpl.innerHTML = `${recentNotifstext(4)}`;
+    }
     main.insertBefore(recentNotifsPpl, traffic); 
     
     const eachrecentNotifsPpl = recentNotifsPpl.querySelectorAll('.recent-notif-act-outerDiv');
